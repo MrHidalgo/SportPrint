@@ -1,2 +1,52 @@
 // FOOTER
+.footer
+  min-height: 255px
 
+  &__container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    padding-top: 30px
+
+  &__row
+    &--logo
+    &--slogan
+      p,
+      a
+        font-size: 18px
+
+      p
+        margin-bottom: 30px
+      a
+        color: $colorBirdFlower
+
+    &--contacts
+      .footer__row-wrap
+        margin-bottom: 30px
+        &:last-child
+          margin-bottom: 0
+
+        > a
+          font:
+            size: 24px
+            weight: 500
+
+          i
+            display: inline-block
+            vertical-align: middle
+            margin-left: 10px
+
+    &--phone
+      text-align: right
+      a
+        display: block
+        font:
+          size: 24px
+          weight: 500
+
+    &--privacy
+      text-align: right
+      p
+        font-size: 14px
+        margin-bottom: 15px

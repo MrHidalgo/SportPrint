@@ -1,0 +1,15 @@
+-
+  var menuValue = [
+    "КАЧЕСТВЕННАЯ ФОРМА",
+    "СОБСТВЕННОЕ ПРОИЗВОДСТВО",
+    "КАТАЛОГ ПРОДУКЦИИ",
+    "ДОСТАВКА И ОПЛАТА",
+    "ПРИМЕРЫ РАБОТ"
+  ];
+
+.menu
+  -for(var i = 0, len = menuValue.length; i < len; i++)
+    a(
+      href="#"
+      class="menu__item"
+    )!= menuValue[i]

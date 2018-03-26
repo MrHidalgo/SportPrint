@@ -1,11 +1,56 @@
 $sprite: (
-	logo: (
+	fb: (
+		offset-x: -75px,
+		offset-y: -30px,
+		width: 9px,
+		height: 20px,
+		total-width: 95px,
+		total-height: 58px,
+		image: '../img/sprite.png'
+	),
+	in: (
+		offset-x: -43px,
+		offset-y: -38px,
+		width: 20px,
+		height: 20px,
+		total-width: 95px,
+		total-height: 58px,
+		image: '../img/sprite.png'
+	),
+	tg: (
+		offset-x: -75px,
+		offset-y: 0px,
+		width: 20px,
+		height: 20px,
+		total-width: 95px,
+		total-height: 58px,
+		image: '../img/sprite.png'
+	),
+	viber: (
 		offset-x: 0px,
 		offset-y: 0px,
-		width: 300px,
-		height: 70px,
-		total-width: 300px,
-		total-height: 70px,
+		width: 28px,
+		height: 28px,
+		total-width: 95px,
+		total-height: 58px,
+		image: '../img/sprite.png'
+	),
+	vk: (
+		offset-x: 0px,
+		offset-y: -38px,
+		width: 33px,
+		height: 20px,
+		total-width: 95px,
+		total-height: 58px,
+		image: '../img/sprite.png'
+	),
+	whatsapp: (
+		offset-x: -38px,
+		offset-y: 0px,
+		width: 27px,
+		height: 27px,
+		total-width: 95px,
+		total-height: 58px,
 		image: '../img/sprite.png'
 	),
 );
@@ -64,6 +109,21 @@ $sprite: (
 
 
 
-	.icon-logo {
-		@include sprite(logo)
+	.icon-fb {
+		@include sprite(fb)
+	}
+	.icon-in {
+		@include sprite(in)
+	}
+	.icon-tg {
+		@include sprite(tg)
+	}
+	.icon-viber {
+		@include sprite(viber)
+	}
+	.icon-vk {
+		@include sprite(vk)
+	}
+	.icon-whatsapp {
+		@include sprite(whatsapp)
 	}

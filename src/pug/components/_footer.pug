@@ -1,9 +1,47 @@
 // FOOTER :: START
 
 
-//footer.footer
-//  .container
-//    .footer__wrapper
-      
-      
+footer.footer
+  .container
+    .footer__wrapper
+
+      include _menu
+
+      .footer__container
+        .footer__row.footer__row--logo
+
+          include _logo
+
+        .footer__row.footer__row--slogan
+
+          p!= "Мы были одними из первых</br>в России и остались лучшими"
+
+          a(href="mailto:info@sport-print.ru" class="" title="")!= "info@sport-print.ru"
+
+        .footer__row.footer__row--contacts
+
+          .footer__row-wrap
+            a(href="tel:89007973569")!= "8 (900) 797-3569"
+
+            a(href="#")
+              i.icon-viber
+
+            a(href="#")
+              i.icon-whatsapp
+
+          .footer__row-wrap
+
+            include _social
+
+        .footer__row.footer__row--phone
+
+          a(href="tel:84957973569")!= "8 (495) 797-3569"
+          a(href="tel:88007758760")!= "8 800 775-87-60"
+
+        .footer__row.footer__row--privacy
+
+          p!= "Разработка сайта — <a href='http://Bofer.ru' target='_blank'>Bofer.ru</a>"
+          p!= "Политика конфиденциальности"
+
+
 // FOOTER :: END
