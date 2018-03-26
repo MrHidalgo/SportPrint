@@ -1,29 +1,38 @@
 $sprite: (
 	fb: (
-		offset-x: -75px,
-		offset-y: -30px,
+		offset-x: 0px,
+		offset-y: -74px,
 		width: 9px,
 		height: 20px,
-		total-width: 95px,
-		total-height: 58px,
+		total-width: 108px,
+		total-height: 94px,
 		image: '../img/sprite.png'
 	),
 	in: (
-		offset-x: -43px,
-		offset-y: -38px,
+		offset-x: -75px,
+		offset-y: -30px,
 		width: 20px,
 		height: 20px,
-		total-width: 95px,
-		total-height: 58px,
+		total-width: 108px,
+		total-height: 94px,
+		image: '../img/sprite.png'
+	),
+	preview: (
+		offset-x: 0px,
+		offset-y: -38px,
+		width: 26px,
+		height: 26px,
+		total-width: 108px,
+		total-height: 94px,
 		image: '../img/sprite.png'
 	),
 	tg: (
-		offset-x: -75px,
-		offset-y: 0px,
+		offset-x: -36px,
+		offset-y: -38px,
 		width: 20px,
 		height: 20px,
-		total-width: 95px,
-		total-height: 58px,
+		total-width: 108px,
+		total-height: 94px,
 		image: '../img/sprite.png'
 	),
 	viber: (
@@ -31,17 +40,17 @@ $sprite: (
 		offset-y: 0px,
 		width: 28px,
 		height: 28px,
-		total-width: 95px,
-		total-height: 58px,
+		total-width: 108px,
+		total-height: 94px,
 		image: '../img/sprite.png'
 	),
 	vk: (
-		offset-x: 0px,
-		offset-y: -38px,
+		offset-x: -75px,
+		offset-y: 0px,
 		width: 33px,
 		height: 20px,
-		total-width: 95px,
-		total-height: 58px,
+		total-width: 108px,
+		total-height: 94px,
 		image: '../img/sprite.png'
 	),
 	whatsapp: (
@@ -49,8 +58,8 @@ $sprite: (
 		offset-y: 0px,
 		width: 27px,
 		height: 27px,
-		total-width: 95px,
-		total-height: 58px,
+		total-width: 108px,
+		total-height: 94px,
 		image: '../img/sprite.png'
 	),
 );
@@ -114,6 +123,9 @@ $sprite: (
 	}
 	.icon-in {
 		@include sprite(in)
+	}
+	.icon-preview {
+		@include sprite(preview)
 	}
 	.icon-tg {
 		@include sprite(tg)
