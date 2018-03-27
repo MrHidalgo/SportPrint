@@ -1,65 +1,110 @@
 $sprite: (
 	fb: (
-		offset-x: 0px,
-		offset-y: -74px,
+		offset-x: -228px,
+		offset-y: -168px,
 		width: 9px,
 		height: 20px,
-		total-width: 108px,
-		total-height: 94px,
+		total-width: 250px,
+		total-height: 201px,
 		image: '../img/sprite.png'
 	),
 	in: (
-		offset-x: -75px,
-		offset-y: -30px,
+		offset-x: -230px,
+		offset-y: -93px,
 		width: 20px,
 		height: 20px,
-		total-width: 108px,
-		total-height: 94px,
+		total-width: 250px,
+		total-height: 201px,
 		image: '../img/sprite.png'
 	),
 	preview: (
-		offset-x: 0px,
-		offset-y: -38px,
+		offset-x: -192px,
+		offset-y: -168px,
 		width: 26px,
 		height: 26px,
-		total-width: 108px,
-		total-height: 94px,
+		total-width: 250px,
+		total-height: 201px,
 		image: '../img/sprite.png'
 	),
 	tg: (
-		offset-x: -36px,
-		offset-y: -38px,
+		offset-x: -229px,
+		offset-y: -131px,
 		width: 20px,
 		height: 20px,
-		total-width: 108px,
-		total-height: 94px,
+		total-width: 250px,
+		total-height: 201px,
 		image: '../img/sprite.png'
 	),
 	viber: (
-		offset-x: 0px,
-		offset-y: 0px,
+		offset-x: -192px,
+		offset-y: -93px,
 		width: 28px,
 		height: 28px,
-		total-width: 108px,
-		total-height: 94px,
+		total-width: 250px,
+		total-height: 201px,
 		image: '../img/sprite.png'
 	),
 	vk: (
-		offset-x: -75px,
-		offset-y: 0px,
+		offset-x: -143px,
+		offset-y: -92px,
 		width: 33px,
 		height: 20px,
-		total-width: 108px,
-		total-height: 94px,
+		total-width: 250px,
+		total-height: 201px,
 		image: '../img/sprite.png'
 	),
 	whatsapp: (
-		offset-x: -38px,
-		offset-y: 0px,
+		offset-x: -192px,
+		offset-y: -131px,
 		width: 27px,
 		height: 27px,
-		total-width: 108px,
-		total-height: 94px,
+		total-width: 250px,
+		total-height: 201px,
+		image: '../img/sprite.png'
+	),
+	work-0: (
+		offset-x: -62px,
+		offset-y: -92px,
+		width: 71px,
+		height: 70px,
+		total-width: 250px,
+		total-height: 201px,
+		image: '../img/sprite.png'
+	),
+	work-1: (
+		offset-x: 0px,
+		offset-y: -92px,
+		width: 52px,
+		height: 109px,
+		total-width: 250px,
+		total-height: 201px,
+		image: '../img/sprite.png'
+	),
+	work-2: (
+		offset-x: 0px,
+		offset-y: 0px,
+		width: 91px,
+		height: 82px,
+		total-width: 250px,
+		total-height: 201px,
+		image: '../img/sprite.png'
+	),
+	work-3: (
+		offset-x: -192px,
+		offset-y: 0px,
+		width: 58px,
+		height: 83px,
+		total-width: 250px,
+		total-height: 201px,
+		image: '../img/sprite.png'
+	),
+	work-4: (
+		offset-x: -101px,
+		offset-y: 0px,
+		width: 81px,
+		height: 81px,
+		total-width: 250px,
+		total-height: 201px,
 		image: '../img/sprite.png'
 	),
 );
@@ -138,4 +183,19 @@ $sprite: (
 	}
 	.icon-whatsapp {
 		@include sprite(whatsapp)
+	}
+	.icon-work-0 {
+		@include sprite(work-0)
+	}
+	.icon-work-1 {
+		@include sprite(work-1)
+	}
+	.icon-work-2 {
+		@include sprite(work-2)
+	}
+	.icon-work-3 {
+		@include sprite(work-3)
+	}
+	.icon-work-4 {
+		@include sprite(work-4)
 	}

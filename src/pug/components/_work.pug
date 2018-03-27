@@ -1,0 +1,27 @@
+-
+  var workArrName = [
+    "ВЫ ОСТВЛЯЕТЕ</br>ЗАЯВКУ",
+    "МЫ ГОТОВИМ</br>УНИКАЛЬНЫЙ ДИЗАЙН",
+    "ВЫ ВНОСИТЕ</br>ПРЕДОПЛАТУ",
+    "МНОГОЭТАПНОЕ</br>ПРОИЗВОДСТВО",
+    "ЗАКАЗ ГОТОВ"
+  ];
+
+.work
+  .container
+    .work__wrap
+
+      p.work__subtitle!= "СХЕМА"
+      p.work__title!= "РАБОТЫ"
+
+      .work__row
+        -for(var i = 0, len = workArrName.length; i < len; i++)
+          .work__block
+            .work__circle
+              i(class="icon-work-" + i)
+
+              span!= "0" + (i + 1)
+
+
+            p.work__block-text!= workArrName[i]
+
