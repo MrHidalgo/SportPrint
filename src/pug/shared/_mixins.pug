@@ -7,3 +7,8 @@ mixin icon(name, modClass)
     - var modClass = ' ' + modClass
   svg(class="ico " + name + modClass)
     use(xlink:href= svgSprite + '#' + name)
+
+
+mixin titleBlock(subtitleVal, titleVal)
+  p.main__subtitle!= subtitleVal
+  p.main__title!= titleVal

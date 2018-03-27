@@ -170,8 +170,18 @@ $(document).ready(function(){
     })
 
     // other individual sliders goes here
-    $('[js-myCustomSlider]').slick({
-
+    $('.js-clientSlider').not('.slick-initialized').slick({
+      dots: true,
+      pauseOnDotsHover: true,
+      prevArrow: false,
+      nextArrow: false,
+      speed: 550,
+      infinite: true,
+      slidesToShow: 8,
+      slidesToScroll: 8,
+      customPaging: function() {
+        return '<div></div>';
+      }
     })
 
   }
