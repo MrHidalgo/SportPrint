@@ -1,0 +1,50 @@
+-
+  var infoArrText = [
+    "Принимаем заказы от 1 единицы",
+    "Шьем из тканей мировых производителей",
+    "Широкая размерная линейка",
+    "Индивидуальное брендирование",
+    "Детские и женские модели",
+    "Специальные предложения для оптовиков"
+  ];
+
+
+.info
+
+  img(
+    src="./img/img-bg__info.png"
+    srcset="./img/img-bg__info@2x.png 2x"
+    class="info__img-bg"
+    alt=""
+  )
+
+  .container
+
+    img(
+      src="./img/img-forms__info.png"
+      srcset="./img/img-forms__info@2x.png 2x"
+      class="info__img-forms"
+      alt=""
+    )
+
+    .info__wrap
+
+      h1!= "ДИЗАЙН ЛЮБОЙ</br>СЛОЖНОСТИ"
+      h2!= "НАШИ РЕШЕНИЯ СООТВЕТСТВУЮТ ВАШИМ ЗАПРОСАМ — МЫ ЗНАЕМ, КАК ВЫГЛЯДИТ ПОБЕДИТЕЛЬ"
+
+      .info__row
+        .info__block
+          .info__block-left
+            p!= "МЫ ГАРАНТИРУЕМ КАЧЕСТВО, АНАЛОГИЧНОЕ МИРОВЫМ БРЕНДАМ!"
+            p!= "Носкость ткани, прочность швов и сохранение формы на 15% выше чем у конкурентов. <span>Найдете брак – мы вернем деньги!</span>"
+          .info__block-right
+            p!= "РАССКАЖИТЕ КАКАЯ ФОРМА</br>НУЖНА ВАМ"
+            button(type="button")!= "ОПИСАТЬ ФОРМУ"
+
+      .info__row
+        .info__list
+          -for(var i = 0, len = infoArrText.length; i < len; i++)
+            .info__list-wrap
+              .info__list-iconWrap
+                +icon('ico-info-' + i)
+              p!= infoArrText[i]
