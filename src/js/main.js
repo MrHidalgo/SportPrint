@@ -175,7 +175,6 @@ $(document).ready(function(){
       pauseOnDotsHover: true,
       prevArrow: false,
       nextArrow: false,
-      autoplay: true,
       speed: 550,
       infinite: true,
       slidesToShow: 8,
@@ -203,9 +202,6 @@ $(document).ready(function(){
       slidesPerView: 1,
       spaceBetween: 30,
       mousewheel: false,
-      autoplay: {
-        delay: 5000
-      },
       loop: true,
       pagination: {
         el: '.swiper-pagination',
