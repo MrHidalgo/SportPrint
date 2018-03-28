@@ -16,18 +16,18 @@ footer.footer
 
           p!= "Мы были одними из первых</br>в России и остались лучшими"
 
-          a(href="mailto:info@sport-print.ru" class="" title="")!= "info@sport-print.ru"
+          a(href="mailto:info@sport-print.ru" title="")!= "info@sport-print.ru"
 
         .footer__row.footer__row--contacts
 
           .footer__row-wrap
             a(href="tel:89007973569")!= "8 (900) 797-3569"
 
-            a(href="#")
-              i.icon-viber
+            a(href="#" title="")
+              +icon('ico-viber')
 
-            a(href="#")
-              i.icon-whatsapp
+            a(href="#" title="")
+              +icon('ico-whatsapp')
 
           .footer__row-wrap
 
@@ -35,8 +35,8 @@ footer.footer
 
         .footer__row.footer__row--phone
 
-          a(href="tel:84957973569")!= "8 (495) 797-3569"
-          a(href="tel:88007758760")!= "8 800 775-87-60"
+          a(href="tel:84957973569" title="")!= "8 (495) 797-3569"
+          a(href="tel:88007758760" title="")!= "8 800 775-87-60"
 
         .footer__row.footer__row--privacy
 
