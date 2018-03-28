@@ -209,6 +209,15 @@ $(document).ready(function(){
       }
     });
 
+    var reviewCurrent = document.querySelector("[js-reviewCurrent]");
+    var reviewMain = document.querySelector("[js-reviewMain]");
+    var exampleCurrent = document.querySelector("[js-exampleCurrent]");
+    var exampleMain = document.querySelector("[js-exampleMain]");
+
+
+    reviewMain.innerHTML = (swiperReviews.slides.length - 2);
+    exampleMain.innerHTML = (swiperExample.slides.length - 2);
+
   }
 
   //////////

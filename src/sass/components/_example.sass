@@ -1,4 +1,28 @@
 .example
+
+  &__count
+    position: absolute
+    top: 41px
+    right: 31px
+    font-family: "KazmannSans", Arial, sans-serif
+
+    span
+      display: inline-block
+      vertical-align: top
+
+    &-current
+      font-size: 70px
+      color: $colorWhite
+    &-sign
+      padding-left: 3px
+      padding-right: 3px
+    &-sign,
+    &-main
+      position: relative
+      top: 5px
+      font-size: 40px
+      color: $colorBirdFlower
+
   &__row
     height: 630px
     margin-top: 85px
