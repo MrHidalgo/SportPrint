@@ -1,0 +1,46 @@
+-
+  var paginationVal = [
+    "ФУТБОЛ",
+    "БАСКЕТБОЛ",
+    "РЕГБИ",
+    "ВОЛЕЙБОЛ",
+    "ХОККЕЙ"
+  ];
+
+
+
+.banner
+  .container
+
+    .banner__wrap
+      .banner__container
+
+        .banner__row
+          .banner__row-logo
+            include _logo
+
+          .banner__row-slogan
+            p!= "Мы были одними из первых</br>в России и остались лучшими"
+
+        .banner__row
+          .banner__row-phone
+            p!= "8 800 775-87-60"
+
+          .banner__row-button
+            a(href="#" title="")!= "ЗАКАЗАТЬ ЗВОНОК"
+
+      h1!= "СОЗДАЕМ</br>СПОРТИВНУЮ</br>ФОРМУ <span>ДЛЯ</br>ЧЕМПИОНОВ</span>"
+      h2!= "#БЕЗ ОГРАНИЧЕНИЙ: "
+      p!= "Количество, цвет и фасон на 100%</br>определяет заказчик. Вы сами</br>знаете, что вам нужно!"
+
+      .banner__footer
+        .banner__box
+          p!= "РАЗРАБОТАЙТЕ БЕСПЛАТНО МАКЕТ СВОЕЙ ФОРМЫ ПРЯМО СЕЙЧАС"
+          a(href="#" title="")!= "СОЗДАТЬ МАКЕТ"
+
+        .banner__pagination
+          -for(var i = 0, len = paginationVal.length; i < len; i++)
+            .banner__pagination-wrap
+              a(href="#" title="")!= paginationVal[i]
+
+

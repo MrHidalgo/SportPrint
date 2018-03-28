@@ -203,6 +203,9 @@ $(document).ready(function(){
       slidesPerView: 1,
       spaceBetween: 30,
       mousewheel: false,
+      autoplay: {
+        delay: 5000
+      },
       loop: true,
       pagination: {
         el: '.swiper-pagination',
