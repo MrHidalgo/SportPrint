@@ -1,6 +1,8 @@
 // FOOTER
 .footer
   min-height: 255px
+  +r($wide)
+    border-top: 1px solid $colorGainsboro
 
   &__container
     display: flex
@@ -11,11 +13,30 @@
 
   &__row
     &--logo
+      +respondTo(tablet-max)
+        width: (100% / 3)
+        text-align: center
+      +respondTo(mobile-max)
+        width: 100%
+
+    &--logo,
+    &--slogan,
+    &--contacts
+      +respondTo(tablet-max)
+        margin-bottom: 30px
+
     &--slogan
+      +respondTo(tablet-max)
+        width: (100% / 3)
+        text-align: center
+      +respondTo(mobile-max)
+        width: (100% / 2)
+      +respondTo(small-mobile)
+        width: 100%
+
       p,
       a
         font-size: 18px
-
       p
         margin-bottom: 30px
       a
@@ -26,6 +47,14 @@
           transition: text-decoration 0.3s $ease
 
     &--contacts
+      +respondTo(tablet-max)
+        width: (100% / 3)
+        text-align: center
+      +respondTo(mobile-max)
+        width: (100% / 2)
+      +respondTo(small-mobile)
+        width: 100%
+
       .footer__row-wrap
         margin-bottom: 30px
         &:last-child
@@ -44,6 +73,13 @@
 
     &--phone
       text-align: right
+      +respondTo(tablet-max)
+        width: (100% / 2)
+        text-align: center
+        margin-bottom: 30px
+      +respondTo(small-mobile)
+        width: 100%
+
       a
         display: block
         font:
@@ -52,6 +88,13 @@
 
     &--privacy
       text-align: right
+      +respondTo(tablet-max)
+        width: (100% / 2)
+        text-align: center
+        margin-bottom: 15px
+      +respondTo(small-mobile)
+        width: 100%
+
       p
         cursor: pointer
         font-size: 14px

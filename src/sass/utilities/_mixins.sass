@@ -123,3 +123,35 @@
 
 =transition($rest...)
     transition: $rest 0.3s ease-in-out
+
+
+//
+//"mobile-max" : "(max-width: 767px)",
+//"mobile-min" : "(min-width: 290px)",
+//"mobile" : "(min-width: 290px) and (max-width: 767px)",
+//
+//"small-mobile" : "(max-width: 575px)",
+//"large-mobile" : "(min-width: 576px) and (max-width: 767px)",
+//
+//"tablet-max" : "(max-width: 1024px)",
+//"tablet-min" : "(min-width: 768px)",
+//"tablet": "(min-width: 768px) and (max-width: 1024px)",
+//
+//"wide-max" : "(max-width: 1440px)",
+//"wide-min" : "(min-width: 1025px)",
+//"wide" : "(min-width: 1025px) and (max-width: 1440px)",
+//
+//"desktop-max" : "(max-width: 1920px)",
+//"desktop-min" : "(min-width: 1441px)",
+//"desktop" : "(min-width: 1441px) and (max-width: 1920px)",
+//
+//"hd" : "(min-width: 1921px)"
+//
+$breakpointsMedia: ("mobile-max" : "(max-width: 767px)","mobile-min" : "(min-width: 290px)","mobile" : "(min-width: 290px) and (max-width: 767px)","small-mobile" : "(max-width: 575px)","large-mobile" : "(min-width: 576px) and (max-width: 767px)","tablet-max" : "(max-width: 1024px)","tablet-min" : "(max-width: 768px)","tablet": "(min-width: 768px) and (max-width: 1024px)","wide-max" : "(max-width: 1440px)","wide-min" : "(min-width: 1025px)","wide" : "(min-width: 1025px) and (max-width: 1440px)","desktop-max" : "(max-width: 1920px)","desktop-min" : "(min-width: 1441px)","desktop" : "(min-width: 1441px) and (max-width: 1920px)","hd" : "(min-width: 1921px)") !default
+
+@mixin respondTo($name)
+  @if map-has-key($breakpointsMedia, $name)
+    @media screen and #{inspect(map-get($breakpointsMedia, $name))}
+      @content
+  @else
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpointsMedia}`. Please make sure it is defined in `$breakpointsMedia` map."

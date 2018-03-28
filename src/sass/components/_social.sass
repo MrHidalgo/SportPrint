@@ -1,6 +1,8 @@
 .social
   display: flex
   align-items: center
+  +respondTo(tablet-max)
+    justify-content: center
 
   &__item
     svg
@@ -14,3 +16,7 @@
       &:hover
         fill: $colorDarkGoldenrod
         +transition(fill)
+
+    &:last-child
+      svg
+        margin-right: 0
