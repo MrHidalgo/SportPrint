@@ -12,14 +12,12 @@
     .work__wrap
 
       +titleBlock("СХЕМА", "РАБОТЫ")
-      //p.work__subtitle!= "СХЕМА"
-      //p.work__title!= "РАБОТЫ"
 
       .work__row
         -for(var i = 0, len = workArrName.length; i < len; i++)
           .work__block
             .work__circle
-              i(class="icon-work-" + i)
+              +icon('ico-work-' + i)
               span!= "0" + (i + 1)
 
             p.work__block-text!= workArrName[i]

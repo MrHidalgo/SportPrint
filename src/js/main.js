@@ -184,6 +184,19 @@ $(document).ready(function(){
       }
     })
 
+    // SWIPER
+    var swiper = new Swiper('.js-sliderExample', {
+      direction: 'vertical',
+      slidesPerView: 1,
+      spaceBetween: 30,
+      mousewheel: true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+    });
+
   }
 
   //////////
