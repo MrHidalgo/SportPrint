@@ -4,9 +4,29 @@
     flex-wrap: wrap
 
   &__block
+    cursor: pointer
     display: flex
     width: 50%
     background-color: $colorWhite
+    +transition(background-image)
+
+    &:hover
+      background-image: url("../img/img-bg__work.png")
+      background-repeat: repeat
+      +transition(background-image)
+
+      .advantages__block-header
+        h4
+          color: $colorWhite
+          +transition(color)
+        .ico
+          fill: $colorWhite
+          +transition(fill)
+
+      .advantages__block-right
+        p
+          color: $colorWhite
+          +transition(color)
 
     &:first-child
       border:
@@ -24,7 +44,6 @@
     &:nth-child(4)
       .advantages__block-right
         padding-bottom: 83px
-
 
 
     &-left
@@ -45,6 +64,7 @@
       p
         font-size: 20px
         line-height: 1.4
+        +transition(color)
 
     &-header
       display: flex
@@ -56,9 +76,11 @@
         font:
           size: 36px
           weight: 500
+        +transition(color)
 
       .ico
         fill: $colorBirdFlower
+        +transition(fill)
 
         &-advantages
           &-0
