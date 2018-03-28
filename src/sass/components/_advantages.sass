@@ -1,0 +1,69 @@
+.advantages
+  &__row
+    display: flex
+    flex-wrap: wrap
+
+  &__block
+    display: flex
+    width: 50%
+    background-color: $colorWhite
+
+    &:hover
+
+    &:first-child
+      border:
+        right: 1px solid rgba($colorBlack, 0.1)
+        bottom: 1px solid rgba($colorBlack, 0.1)
+    &:nth-child(2)
+      border:
+        bottom: 1px solid rgba($colorBlack, 0.1)
+    &:nth-child(3)
+      border:
+        right: 1px solid rgba($colorBlack, 0.1)
+
+    &-left
+      width: 125px
+      padding-top: 60px
+      text-align: center
+
+      p
+        font:
+          size: 50px
+          weight: 200
+        color: rgba($colorBlack, 0.1)
+
+    &-right
+      width: calc(100% - 125px)
+      padding: 35px 35px 70px 0
+
+      p
+        font-size: 20px
+        line-height: 1.6
+
+    &-header
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding-bottom: 35px
+
+      h4
+        font:
+          size: 36px
+          weight: 500
+
+      .ico
+        fill: $colorBirdFlower
+
+        &-advantages
+          &-0
+            width: 63px
+            height: 53px
+          &-1
+            width: 68px
+            height: 58px
+          &-2
+            width: 57px
+            height: 63px
+          &-3
+            width: 63px
+            height: 67px

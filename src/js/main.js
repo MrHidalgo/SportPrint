@@ -175,6 +175,7 @@ $(document).ready(function(){
       pauseOnDotsHover: true,
       prevArrow: false,
       nextArrow: false,
+      autoplay: true,
       speed: 550,
       infinite: true,
       slidesToShow: 8,
