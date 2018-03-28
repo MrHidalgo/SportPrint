@@ -1,0 +1,76 @@
+.reviews
+  &__wrap
+    padding-top: 95px
+    padding-bottom: 300px
+
+  &__row
+    height: 590px
+
+    &-left
+      margin-right: 90px
+
+    &-center
+      h3
+        margin-bottom: 15px
+        font-size: 35px
+        font-weight: 500
+        color: $colorBirdFlower
+      p
+        font-size: 20px
+        line-height: 1.6
+
+    &-right
+      margin-left: 90px
+      margin-right: 90px
+      text-align: center
+
+      img
+        margin-bottom: 30px
+
+      h4,
+      p
+        font-size: 20px
+        font-weight: 500
+
+    .swiper
+      &-container
+        width: 100%
+        height: 100%
+
+        &:before
+          content: ""
+          position: absolute
+          top: 0
+          left: 85px
+          width: 100%
+          height: 100%
+          background-color: $colorWhite
+
+        &:after
+          content: ""
+          position: absolute
+          top: 0
+          right: 115px
+          width: 1px
+          height: 100%
+          background-color: rgba($colorBlack, 0.1)
+
+      &-slide
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        width: calc(100% - 115px)
+
+
+      &-pagination
+        &-bullets
+          right: 55px
+        &-bullet
+          opacity: 1
+          width: 10px
+          height: 10px
+          background-color: $colorGainsboro
+
+          &-active
+            background-color: $colorBirdFlower

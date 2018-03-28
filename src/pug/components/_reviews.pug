@@ -1,0 +1,32 @@
+.reviews
+  .container
+
+    .reviews__wrap
+
+      +titleBlock("НАШИ", "ОТЗЫВЫ")
+
+      .reviews__row
+        .swiper-container.js-sliderReviews
+          .swiper-wrapper
+            -for(var i = 0; i < 10; i++)
+              .swiper-slide
+                .reviews__row-left
+                  img(
+                    src="./img/img-main_reviews.png"
+                  )
+
+                .reviews__row-center
+                  h3!= "БОЛЬШОЕ СПАСИБО!"
+                  p!= "Наш первый комплект игровой формы былвыпущен в далеком 1991 году. И вот уже на протяжении более чем 22 лет мы радуем своих клиентов со всей страны только лучшими игровыми комплектами. За столь основательный опыт работы нашими клиентами стали сотни футбольных, хоккейных, волейбольных и баскетбольных команд, а так же множество бегунов и теннисистов."
+
+                .reviews__row-right
+                  img(
+                    src="./img/img-ava__reviews.png"
+                    alt=""
+                  )
+                  h4!= "ИВАН ИВАНОВ"
+                  p!= "КАЗАНЬ"
+
+          .swiper-pagination
+
+

@@ -186,7 +186,7 @@ $(document).ready(function(){
     })
 
     // SWIPER
-    var swiper = new Swiper('.js-sliderExample', {
+    var swiperExample = new Swiper('.js-sliderExample', {
       direction: 'vertical',
       slidesPerView: 1,
       spaceBetween: 30,
@@ -195,7 +195,19 @@ $(document).ready(function(){
       pagination: {
         el: '.swiper-pagination',
         clickable: true
-      },
+      }
+    });
+
+    var swiperReviews = new Swiper('.js-sliderReviews', {
+      direction: 'vertical',
+      slidesPerView: 1,
+      spaceBetween: 30,
+      mousewheel: false,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
     });
 
   }
