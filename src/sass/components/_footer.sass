@@ -1,7 +1,7 @@
 // FOOTER
 .footer
   min-height: 255px
-  +r($wide)
+  +respondTo(tablet-max)
     border-top: 1px solid $colorGainsboro
 
   &__container
@@ -37,6 +37,8 @@
       p,
       a
         font-size: 18px
+        +respondTo(wide)
+          font-size: 16px
       p
         margin-bottom: 30px
       a
@@ -64,6 +66,8 @@
           font:
             size: 24px
             weight: 500
+          +respondTo(wide)
+            font-size: 20px
 
           svg
             fill: $colorBirdFlower
@@ -85,6 +89,8 @@
         font:
           size: 24px
           weight: 500
+        +respondTo(wide)
+          font-size: 20px
 
     &--privacy
       text-align: right

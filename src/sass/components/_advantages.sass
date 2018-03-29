@@ -42,12 +42,16 @@
       .advantages__block-right
         padding-bottom: 83px
         +respondTo(tablet)
-          padding-bottom: 53px
+          padding-bottom: 50px
+        +respondTo(wide)
+          padding-bottom: 60px
     &:nth-child(4)
       .advantages__block-right
         padding-bottom: 83px
         +respondTo(tablet)
-          padding-bottom: 53px
+          padding-bottom: 50px
+        +respondTo(wide)
+          padding-bottom: 60px
 
 
     &-left
@@ -72,6 +76,8 @@
       +respondTo(tablet)
         width: calc(100% - 85px)
         padding: 30px 15px 30px 0
+      +respondTo(wide)
+        padding: 35px 30px 45px 0
 
       p
         font-size: 20px
@@ -79,6 +85,8 @@
         +transition(color)
         +respondTo(tablet)
           font-size: 16px
+        +respondTo(wide)
+          font-size: 18px
 
     &-header
       display: flex
@@ -93,6 +101,8 @@
         +transition(color)
         +respondTo(tablet)
           font-size: 25px
+        +respondTo(wide)
+          font-size: 30px
 
       .ico
         fill: $colorBirdFlower
@@ -105,21 +115,33 @@
             +respondTo(tablet)
               width: 43px
               height: 33px
+            +respondTo(wide)
+              width: 53px
+              height: 43px
           &-1
             width: 68px
             height: 58px
             +respondTo(tablet)
               width: 48px
               height: 38px
+            +respondTo(wide)
+              width: 58px
+              height: 48px
           &-2
             width: 57px
             height: 63px
             +respondTo(tablet)
               width: 37px
               height: 43px
+            +respondTo(wide)
+              width: 47px
+              height: 53px
           &-3
             width: 63px
             height: 67px
             +respondTo(tablet)
               width: 43px
               height: 47px
+            +respondTo(wide)
+              width: 53px
+              height: 57px

@@ -8,6 +8,8 @@
   background-position: center
   +respondTo(tablet)
     min-height: 610px
+  +respondTo(wide)
+    min-height: 790px
 
   &__container
     display: flex
@@ -70,6 +72,8 @@
       +respondTo(tablet)
         margin-bottom: 25px
         font-size: 35px
+      +respondTo(wide)
+        font-size: 50px
 
       span
         color: $colorBirdFlower
@@ -147,6 +151,8 @@
       max-width: 350px
       margin-left: (315px + 30px)
       padding-top: 50px
+    +respondTo(wide)
+      margin-left: (415px + 50px)
 
     &-wrap
       a

@@ -7,8 +7,10 @@
     height: 62px
     border-top: 1px solid $colorGainsboro
     border-bottom: 1px solid $colorGainsboro
-    +r($wide)
+    +respondTo(tablet-max)
       display: none
+    +respondTo(tablet)
+      height: 50px
 
   .header &
     height: 56px
@@ -28,7 +30,8 @@
     +transition(border-color)
     +respondTo(tablet)
       font-size: 16px
-
+    +respondTo(wide)
+      font-size: 16px
 
     &:hover
       border-bottom-color: $colorBirdFlower

@@ -12,6 +12,8 @@
     justify-content: space-between
     +respondTo(tablet)
       justify-content: center
+    +respondTo(wide)
+      justify-content: center
 
   &__block
     overflow: hidden
@@ -22,6 +24,8 @@
     margin-bottom: 45px
     background-color: $colorWhite
     +respondTo(tablet)
+      margin: 15px
+    +respondTo(wide)
       margin: 15px
 
     &:hover

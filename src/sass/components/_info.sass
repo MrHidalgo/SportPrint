@@ -15,6 +15,8 @@
       right: 60px
       +respondTo(tablet)
         right: -30%
+      +respondTo(wide)
+        right: -10%
     &-forms
       pointer-events: none
       user-select: none
@@ -22,12 +24,16 @@
       top: 0
       right: -30px
       +respondTo(tablet)
-        right: -25%
+        right: -30%
+      +respondTo(wide)
+        right: -160px
 
   &__wrap
     padding-left: 90px
     padding-top: 10px
     +respondTo(tablet)
+      padding-left: 0
+    +respondTo(wide)
       padding-left: 0
 
     h1
