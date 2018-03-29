@@ -3,6 +3,47 @@
   align-items: center
   justify-content: space-between
 
+  &__mobile
+    display: none
+    z-index: 100
+    overflow-y: auto
+    overflow-x: hidden
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    min-height: 100vh
+    background-color: rgba($colorBlack, 0.55)
+
+    &.is-active
+      display: block
+
+    &-close
+      z-index: 10
+      position: absolute
+      top: 5px
+      right: 55px
+
+      .hamburger-inner
+        background-color: $colorWhite
+        &::before, &::after
+          background-color: $colorWhite
+
+    .menu
+      position: absolute
+      top: 0
+      width: calc(100% - 50px)
+      height: 100%
+      background-color: #000
+      color: $colorWhite
+      flex-direction: column
+      justify-content: center
+
+      &__item
+        height: 55px
+        line-height: 55px
+
+
   .footer &
     height: 62px
     border-top: 1px solid $colorGainsboro

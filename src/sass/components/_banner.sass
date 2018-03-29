@@ -3,6 +3,9 @@
   min-height: 840px
   margin-bottom: 57px
   padding-top: 56px
+  +respondTo(mobile-max)
+    padding-top: 0
+    min-height: 750px
   +respondTo(tablet)
     min-height: 610px
   +respondTo(wide)
@@ -53,8 +56,21 @@
 
     &-logo
       padding-right: 30px
+      +respondTo(mobile-max)
+        padding-right: 0
       +respondTo(tablet)
         padding-right: 15px
+
+      .logo
+        img
+          +respondTo(mobile-max)
+            z-index: 0
+            position: absolute
+            top: 15px
+            left: 0
+            right: 0
+            margin-left: auto
+            margin-right: auto
 
     &-slogan
       font-size: 20px
@@ -68,7 +84,7 @@
       font-size: 36px
       font-weight: 500
       +respondTo(mobile-max)
-      display: none
+        display: none
       +respondTo(tablet)
         font-size: 22px
 
@@ -89,6 +105,8 @@
         font-weight: 500
         +transition(background-color)
         +respondTo(mobile-max)
+          padding-left: 15px
+          padding-right: 15px
           font-size: 16px
         +respondTo(tablet)
           font-size: 18px

@@ -5,3 +5,15 @@
   left: 0
   top: 0
   width: 100%
+  +respondTo(mobile-max)
+    display: none
+
+  &__hamburger
+    display: block
+    +respondTo(tablet-min)
+      display: none
+
+  &__wrapper
+    +respondTo(mobile-max)
+      opacity: 0
+      visibility: hidden

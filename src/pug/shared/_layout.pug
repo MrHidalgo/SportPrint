@@ -9,6 +9,14 @@ html(lang="en")
     #barba-wrapper
       block header
         include ../components/_header
+
+      .menu__mobile
+        .menu__mobile-close.animated
+          .header__hamburger
+            .hamburger.hamburger--squeeze.is-active(js-menuClose)
+              .hamburger-box
+                .hamburger-inner
+        include ../components/_menu
     
       // what should be changed with every pjax
       .page(class=outClass)
