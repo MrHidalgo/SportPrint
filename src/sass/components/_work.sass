@@ -7,6 +7,11 @@
     +respondTo(tablet)
       padding-top: 63px
       padding-bottom: 97px
+    +respondTo(mobile-max)
+      padding-top: 50px
+      padding-bottom: 80px
+
+
 
   .main__subtitle
     color: $colorWhite
@@ -17,11 +22,16 @@
   &__row
     display: flex
     justify-content: center
+    +respondTo(small-mobile)
+      flex-direction: column
+      align-items: center
+    +respondTo(large-mobile)
+      flex-wrap: wrap
     +respondTo(tablet)
       flex-wrap: wrap
 
   &__block
-    +respondTo(tablet)
+    +respondTo(tablet-max)
       margin-bottom: 30px
 
     &:hover
