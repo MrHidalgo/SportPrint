@@ -9,6 +9,8 @@
     width: 50%
     background-color: $colorWhite
     +transition(background-color)
+    +respondTo(mobile-max)
+      width: 100%
 
     &:hover
       background-color: $colorBirdFlower
@@ -32,15 +34,21 @@
       border:
         right: 1px solid rgba($colorBlack, 0.1)
         bottom: 1px solid rgba($colorBlack, 0.1)
+      +respondTo(mobile-max)
+        border-right: 0
     &:nth-child(2)
-      border:
-        bottom: 1px solid rgba($colorBlack, 0.1)
+      border-bottom: 1px solid rgba($colorBlack, 0.1)
     &:nth-child(3)
       border:
         right: 1px solid rgba($colorBlack, 0.1)
+      +respondTo(mobile-max)
+        border-right: 0
+        border-bottom: 1px solid rgba($colorBlack, 0.1)
 
       .advantages__block-right
         padding-bottom: 83px
+        +respondTo(small-mobile)
+          padding-bottom: 15px
         +respondTo(tablet)
           padding-bottom: 50px
         +respondTo(wide)
@@ -48,6 +56,8 @@
     &:nth-child(4)
       .advantages__block-right
         padding-bottom: 83px
+        +respondTo(small-mobile)
+          padding-bottom: 15px
         +respondTo(tablet)
           padding-bottom: 50px
         +respondTo(wide)
@@ -58,6 +68,9 @@
       width: 125px
       padding-top: 52px
       text-align: center
+      +respondTo(small-mobile)
+        width: 80px
+        padding-top: 30px
       +respondTo(tablet)
         width: 85px
         padding-top: 32px
@@ -67,12 +80,17 @@
           size: 50px
           weight: 200
         color: rgba($colorBlack, 0.1)
+        +respondTo(small-mobile)
+          font-size: 30px
         +respondTo(tablet)
           font-size: 35px
 
     &-right
       width: calc(100% - 125px)
       padding: 50px 35px 60px 0
+      +respondTo(small-mobile)
+        width: calc(100% - 80px)
+        padding: 15px 15px 15px 0
       +respondTo(tablet)
         width: calc(100% - 85px)
         padding: 30px 15px 30px 0
@@ -83,6 +101,8 @@
         font-size: 20px
         line-height: 1.4
         +transition(color)
+        +respondTo(small-mobile)
+          font-size: 14px
         +respondTo(tablet)
           font-size: 16px
         +respondTo(wide)
@@ -93,12 +113,16 @@
       align-items: center
       justify-content: space-between
       padding-bottom: 35px
+      +respondTo(small-mobile)
+        padding-bottom: 20px
 
       h4
         font:
           size: 36px
           weight: 500
         +transition(color)
+        +respondTo(small-mobile)
+          font-size: 23px
         +respondTo(tablet)
           font-size: 25px
         +respondTo(wide)
@@ -112,6 +136,9 @@
           &-0
             width: 63px
             height: 53px
+            +respondTo(small-mobile)
+              width: 33px
+              height: 23px
             +respondTo(tablet)
               width: 43px
               height: 33px
@@ -121,6 +148,9 @@
           &-1
             width: 68px
             height: 58px
+            +respondTo(small-mobile)
+              width: 38px
+              height: 28px
             +respondTo(tablet)
               width: 48px
               height: 38px
@@ -130,6 +160,9 @@
           &-2
             width: 57px
             height: 63px
+            +respondTo(small-mobile)
+              width: 27px
+              height: 33px
             +respondTo(tablet)
               width: 37px
               height: 43px
@@ -139,6 +172,9 @@
           &-3
             width: 63px
             height: 67px
+            +respondTo(small-mobile)
+              width: 33px
+              height: 37px
             +respondTo(tablet)
               width: 43px
               height: 47px
