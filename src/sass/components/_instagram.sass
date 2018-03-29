@@ -3,6 +3,8 @@
 
   .main__title
     padding-bottom: 110px
+    +respondTo(wide-max)
+      padding-bottom: 50px
     +respondTo(tablet)
       padding-bottom: 80px
 
@@ -10,10 +12,9 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    +respondTo(tablet)
+    +respondTo(wide-max)
       justify-content: center
-    +respondTo(wide)
-      justify-content: center
+
 
   &__block
     overflow: hidden
@@ -23,10 +24,10 @@
     height: 293px
     margin-bottom: 45px
     background-color: $colorWhite
-    +respondTo(tablet)
+    +respondTo(wide-max)
       margin: 15px
-    +respondTo(wide)
-      margin: 15px
+    +respondTo(small-mobile)
+      margin: 0 0 15px 0
 
     &:hover
       img
