@@ -14,6 +14,8 @@
     height: 56px
     background-color: transparent
     border-bottom: 1px solid $colorGainsboro
+    +respondTo(tablet)
+      height: 50px
 
   &__item
     display: flex
@@ -21,9 +23,13 @@
     height: 100%
     font-size: 20px
     font-weight: 300
+    border-top: 4px solid transparent
     border-bottom: 4px solid transparent
     +transition(border-color)
+    +respondTo(tablet)
+      font-size: 16px
+
 
     &:hover
-      border-color: $colorBirdFlower
+      border-bottom-color: $colorBirdFlower
       +transition(border-color)

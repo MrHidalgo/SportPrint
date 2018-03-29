@@ -3,11 +3,15 @@
 
   .main__title
     padding-bottom: 110px
+    +respondTo(tablet)
+      padding-bottom: 80px
 
   &__row
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+    +respondTo(tablet)
+      justify-content: center
 
   &__block
     overflow: hidden
@@ -17,6 +21,8 @@
     height: 293px
     margin-bottom: 45px
     background-color: $colorWhite
+    +respondTo(tablet)
+      margin: 15px
 
     &:hover
       img

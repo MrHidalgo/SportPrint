@@ -27,6 +27,9 @@
     height: 630px
     margin-top: 85px
     background-color: $colorNeroDark
+    +respondTo(tablet)
+      height: 530px
+      margin-top: 65px
 
     .swiper
       &-container
@@ -67,6 +70,9 @@
     right: 0
     margin-left: auto
     margin-right: auto
+    +respondTo(tablet)
+      max-width: 55%
+      right: -15%
 
   &__text
     padding-left: 125px
@@ -75,3 +81,6 @@
       weight: 800
     color: $colorWhite
     line-height: 1.5
+    +respondTo(tablet)
+      padding-left: 35px
+      font-size: 60px

@@ -4,6 +4,9 @@
     padding-bottom: 117px
     background-image: url("../img/img-bg__work.png")
     background-repeat: repeat
+    +respondTo(tablet)
+      padding-top: 63px
+      padding-bottom: 97px
 
   .main__subtitle
     color: $colorWhite
@@ -14,8 +17,13 @@
   &__row
     display: flex
     justify-content: center
+    +respondTo(tablet)
+      flex-wrap: wrap
 
   &__block
+    +respondTo(tablet)
+      margin-bottom: 30px
+
     > p
       text-align: center
       font:
@@ -36,6 +44,9 @@
       right: 23px
     border-radius: 100%
     border: 2px solid rgba($colorWhite, 0.2)
+    +respondTo(tablet)
+      width: 150px
+      height: 150px
 
     .ico
       fill: $colorWhite

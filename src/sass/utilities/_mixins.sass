@@ -133,21 +133,21 @@
 //"small-mobile" : "(max-width: 575px)",
 //"large-mobile" : "(min-width: 576px) and (max-width: 767px)",
 //
-//"tablet-max" : "(max-width: 1024px)",
+//"tablet-max" : "(max-width: 1023px)",
 //"tablet-min" : "(min-width: 768px)",
-//"tablet": "(min-width: 768px) and (max-width: 1024px)",
+//"tablet": "(min-width: 768px) and (max-width: 1023px)",
 //
-//"wide-max" : "(max-width: 1440px)",
-//"wide-min" : "(min-width: 1025px)",
-//"wide" : "(min-width: 1025px) and (max-width: 1440px)",
+//"wide-max" : "(max-width: 1439px)",
+//"wide-min" : "(min-width: 1024px)",
+//"wide" : "(min-width: 1024px) and (max-width: 1439px)",
 //
-//"desktop-max" : "(max-width: 1920px)",
-//"desktop-min" : "(min-width: 1441px)",
-//"desktop" : "(min-width: 1441px) and (max-width: 1920px)",
+//"desktop-max" : "(max-width: 1919px)",
+//"desktop-min" : "(min-width: 1440px)",
+//"desktop" : "(min-width: 1440px) and (max-width: 1919px)",
 //
-//"hd" : "(min-width: 1921px)"
+//"hd" : "(min-width: 1920px)"
 //
-$breakpointsMedia: ("mobile-max" : "(max-width: 767px)","mobile-min" : "(min-width: 290px)","mobile" : "(min-width: 290px) and (max-width: 767px)","small-mobile" : "(max-width: 575px)","large-mobile" : "(min-width: 576px) and (max-width: 767px)","tablet-max" : "(max-width: 1024px)","tablet-min" : "(max-width: 768px)","tablet": "(min-width: 768px) and (max-width: 1024px)","wide-max" : "(max-width: 1440px)","wide-min" : "(min-width: 1025px)","wide" : "(min-width: 1025px) and (max-width: 1440px)","desktop-max" : "(max-width: 1920px)","desktop-min" : "(min-width: 1441px)","desktop" : "(min-width: 1441px) and (max-width: 1920px)","hd" : "(min-width: 1921px)") !default
+$breakpointsMedia: ("mobile-max" : "(max-width: 767px)","mobile-min" : "(min-width: 290px)","mobile" : "(min-width: 290px) and (max-width: 767px)","small-mobile" : "(max-width: 575px)","large-mobile" : "(min-width: 576px) and (max-width: 767px)","tablet-max" : "(max-width: 1023px)","tablet-min" : "(max-width: 768px)","tablet": "(min-width: 768px) and (max-width: 1023px)","wide-max" : "(max-width: 1439px)","wide-min" : "(min-width: 1024px)","wide" : "(min-width: 1024px) and (max-width: 1439px)","desktop-max" : "(max-width: 1919px)","desktop-min" : "(min-width: 1440px)","desktop" : "(min-width: 1440px) and (max-width: 1919px)","hd" : "(min-width: 1920px)") !default
 
 @mixin respondTo($name)
   @if map-has-key($breakpointsMedia, $name)

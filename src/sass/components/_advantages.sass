@@ -8,12 +8,12 @@
     display: flex
     width: 50%
     background-color: $colorWhite
-    +transition(background-image)
+    +transition(background-color)
 
     &:hover
-      background-image: url("../img/img-bg__work.png")
+      background-color: $colorBirdFlower
       background-repeat: repeat
-      +transition(background-image)
+      +transition(background-color)
 
       .advantages__block-header
         h4
@@ -41,30 +41,44 @@
 
       .advantages__block-right
         padding-bottom: 83px
+        +respondTo(tablet)
+          padding-bottom: 53px
     &:nth-child(4)
       .advantages__block-right
         padding-bottom: 83px
+        +respondTo(tablet)
+          padding-bottom: 53px
 
 
     &-left
       width: 125px
       padding-top: 52px
       text-align: center
+      +respondTo(tablet)
+        width: 85px
+        padding-top: 32px
 
       p
         font:
           size: 50px
           weight: 200
         color: rgba($colorBlack, 0.1)
+        +respondTo(tablet)
+          font-size: 35px
 
     &-right
       width: calc(100% - 125px)
       padding: 50px 35px 60px 0
+      +respondTo(tablet)
+        width: calc(100% - 85px)
+        padding: 30px 15px 30px 0
 
       p
         font-size: 20px
         line-height: 1.4
         +transition(color)
+        +respondTo(tablet)
+          font-size: 16px
 
     &-header
       display: flex
@@ -77,6 +91,8 @@
           size: 36px
           weight: 500
         +transition(color)
+        +respondTo(tablet)
+          font-size: 25px
 
       .ico
         fill: $colorBirdFlower
@@ -86,12 +102,24 @@
           &-0
             width: 63px
             height: 53px
+            +respondTo(tablet)
+              width: 43px
+              height: 33px
           &-1
             width: 68px
             height: 58px
+            +respondTo(tablet)
+              width: 48px
+              height: 38px
           &-2
             width: 57px
             height: 63px
+            +respondTo(tablet)
+              width: 37px
+              height: 43px
           &-3
             width: 63px
             height: 67px
+            +respondTo(tablet)
+              width: 43px
+              height: 47px
