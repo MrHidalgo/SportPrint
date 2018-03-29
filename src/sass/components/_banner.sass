@@ -10,7 +10,6 @@
 
   &__img
     opacity: 0
-    visibility: hidden
     z-index: 0
     position: absolute
     top: 50%
@@ -25,7 +24,6 @@
 
     &.is-active
       opacity: 1
-      visibility: visible
 
     &-wrap
       overflow: hidden
@@ -193,9 +191,14 @@
         color: $colorWhite
         border-top: 7px solid transparent
         border-bottom: 7px solid transparent
-        +transition(border-color)
+        +transition(border-color, color)
         +respondTo(tablet)
           font-size: 16px
+
+        &:hover
+          color: rgba($colorWhiteSmoke, 0.75)
+          border-bottom-color: rgba($colorWhiteSmoke, 0.75)
+          +transition(border-color, color)
 
         &.is-active
           border-bottom-color: $colorBirdFlower

@@ -24,11 +24,29 @@
     +respondTo(tablet)
       margin-bottom: 30px
 
+    &:hover
+      .work__circle
+        border-color: $colorWhite
+        +transition(border-color)
+
+        .ico
+          fill: $colorBlack
+          +transition(fill)
+        span
+          background-color: $colorWhite
+          color: $colorBlack
+          +transition(background-color, color)
+
+      .work__block-text
+        color: $colorWhite
+        +transition(color)
+
     > p
       text-align: center
       font:
         size: 20px
         weight: 500
+      +transition(color)
 
   &__circle
     cursor: pointer
@@ -44,6 +62,7 @@
       right: 23px
     border-radius: 100%
     border: 2px solid rgba($colorWhite, 0.2)
+    +transition(border-color)
     +respondTo(tablet)
       width: 140px
       height: 140px
@@ -53,6 +72,7 @@
 
     .ico
       fill: $colorWhite
+      +transition(fill)
       &-work
         &-0
           width: 71px
@@ -85,3 +105,4 @@
       font:
         size: 25px
         family: "KazmannSans", Arial, sans-serif
+      +transition(background-color, color)
