@@ -5,6 +5,9 @@
     top: 41px
     right: 31px
     font-family: "KazmannSans", Arial, sans-serif
+    +respondTo(small-mobile)
+      top: 30px
+      right: 21px
 
     span
       display: inline-block
@@ -13,6 +16,8 @@
     &-current
       font-size: 70px
       color: $colorWhite
+      +respondTo(small-mobile)
+        font-size: 40px
     &-sign
       padding-left: 3px
       padding-right: 3px
@@ -22,13 +27,19 @@
       top: 5px
       font-size: 40px
       color: $colorBirdFlower
+      +respondTo(small-mobile)
+        font-size: 25px
 
   &__row
     height: 630px
     margin-top: 85px
     background-color: $colorNeroDark
-    +respondTo(tablet)
+    +respondTo(small-mobile)
+      height: 500px
+    +respondTo(large-mobile)
       height: 530px
+    +respondTo(tablet)
+      height: 580px
       margin-top: 65px
 
     .swiper
@@ -44,16 +55,24 @@
           width: 1px
           height: 100%
           background-color: rgba($colorWhite, 0.2)
+          +respondTo(small-mobile)
+            right: 80px
 
       &-slide
         position: relative
         display: flex
         align-items: center
+        +respondTo(small-mobile)
+          align-items: flex-start
+        +respondTo(large-mobile)
+          align-items: flex-start
 
 
       &-pagination
         &-bullets
           right: 55px
+          +respondTo(small-mobile)
+            right: 35px
         &-bullet
           opacity: 1
           width: 10px
@@ -70,6 +89,14 @@
     right: 0
     margin-left: auto
     margin-right: auto
+    +respondTo(small-mobile)
+      max-width: 100%
+      max-height: 70%
+    +respondTo(large-mobile)
+      max-width: 100%
+      max-height: 70%
+      left: auto
+      right: 120px
     +respondTo(tablet)
       max-width: 55%
       right: -15%
@@ -83,6 +110,13 @@
       weight: 800
     color: $colorWhite
     line-height: 1.5
+    +respondTo(small-mobile)
+      padding-top: 30px
+      padding-left: 30px
+      font-size: 30px
+    +respondTo(large-mobile)
+      padding-left: 60px
+      font-size: 50px
     +respondTo(tablet)
       padding-left: 35px
       font-size: 60px
