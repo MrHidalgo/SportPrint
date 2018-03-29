@@ -8,6 +8,7 @@
     +respondTo(tablet)
       padding-bottom: 80px
 
+
   &__row
     display: flex
     flex-wrap: wrap
@@ -24,8 +25,12 @@
     height: 293px
     margin-bottom: 45px
     background-color: $colorWhite
-    +respondTo(wide-max)
+    +respondTo(wide)
+      margin: 10px
+    +respondTo(tablet-max)
       margin: 15px
+    +respondTo(large-mobile)
+      margin: 5px
     +respondTo(small-mobile)
       margin: 0 0 15px 0
 
@@ -33,6 +38,7 @@
       img
         transform: scale(1.025)
         +transition(transform)
+
 
     img
       +transition(transform)
