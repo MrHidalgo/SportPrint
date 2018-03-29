@@ -14,7 +14,8 @@
   img(
     src="./img/img-bg__info.png"
     srcset="./img/img-bg__info@2x.png 2x"
-    class="info__img-bg"
+    class="info__img-bg wow wowFadeRight"
+    data-animation-delay="0.45s"
     alt=""
   )
 
@@ -23,28 +24,29 @@
     img(
       src="./img/img-forms__info.png"
       srcset="./img/img-forms__info@2x.png 2x"
-      class="info__img-forms"
+      class="info__img-forms wow wowFadeRight"
+      data-animation-delay="0.65s"
       alt=""
     )
 
     .info__wrap
 
-      h1!= "ДИЗАЙН ЛЮБОЙ</br>СЛОЖНОСТИ"
-      h2!= "НАШИ РЕШЕНИЯ СООТВЕТСТВУЮТ ВАШИМ ЗАПРОСАМ — МЫ ЗНАЕМ, КАК ВЫГЛЯДИТ ПОБЕДИТЕЛЬ"
+      h1.wow.wowFadeLeft(data-animation-delay="0.55s")!= "ДИЗАЙН ЛЮБОЙ</br>СЛОЖНОСТИ"
+      h2.wow.wowFadeLeft(data-animation-delay="0.65s")!= "НАШИ РЕШЕНИЯ СООТВЕТСТВУЮТ ВАШИМ ЗАПРОСАМ — МЫ ЗНАЕМ, КАК ВЫГЛЯДИТ ПОБЕДИТЕЛЬ"
 
       .info__row
         .info__block
-          .info__block-left
+          .info__block-left.wow.wowFadeLeft(data-animation-delay="0.55s")
             p!= "МЫ ГАРАНТИРУЕМ КАЧЕСТВО,</br>АНАЛОГИЧНОЕ МИРОВЫМ БРЕНДАМ!"
             p!= "Носкость ткани, прочность швов и сохранение формы на 15% выше чем у конкурентов. <span>Найдете брак – мы вернем деньги!</span>"
-          .info__block-right
+          .info__block-right.wow.wowFadeRight(data-animation-delay="0.55s")
             p!= "РАССКАЖИТЕ КАКАЯ ФОРМА</br>НУЖНА ВАМ"
             a(href="#" title="")!= "ОПИСАТЬ ФОРМУ"
 
       .info__row
         .info__list
           -for(var i = 0, len = infoArrText.length; i < len; i++)
-            .info__list-wrap
+            .info__list-wrap.wow.wowFadeUp(data-animation-delay="0.65s")
               .info__list-iconWrap
                 +icon('ico-info-' + i)
               p!= infoArrText[i]

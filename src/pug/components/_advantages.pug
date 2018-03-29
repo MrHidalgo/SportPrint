@@ -21,7 +21,7 @@
 
       .advantages__row
         -for(var i = 0, len = advantagesArrTitle.length; i < len; i++)
-          .advantages__block
+          .advantages__block.wow.wowFadeUp(data-animation-delay="0.65s")
 
             .advantages__block-left
               p!= "0" + (i + 1)

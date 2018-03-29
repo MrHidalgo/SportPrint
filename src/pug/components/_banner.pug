@@ -62,29 +62,29 @@
                 .hamburger-box
                   .hamburger-inner
 
-          .banner__row-logo
+          .banner__row-logo.wow.wowFadeLeft(data-animation-delay="0.35s")
             include _logo
 
-          .banner__row-slogan
+          .banner__row-slogan.wow.wowFadeLeft(data-animation-delay="0.35s")
             p!= "Мы были одними из первых</br>в России и остались лучшими"
 
         .banner__row
-          .banner__row-phone
+          .banner__row-phone.wow.wowFadeRight(data-animation-delay="0.35s")
             p!= "8 800 775-87-60"
 
-          .banner__row-button
+          .banner__row-button.wow.wowFadeRight(data-animation-delay="0.35s")
             a(href="#callback" title="" js-popup)!= "ЗАКАЗАТЬ ЗВОНОК"
 
-      h1!= "СОЗДАЕМ</br>СПОРТИВНУЮ</br>ФОРМУ <span>ДЛЯ</br>ЧЕМПИОНОВ</span>"
-      h2!= "#БЕЗ ОГРАНИЧЕНИЙ: "
-      p!= "Количество, цвет и фасон на 100%</br>определяет заказчик. Вы сами</br>знаете, что вам нужно!"
+      h1.wow.wowFadeLeft(data-animation-delay="0.35s")!= "СОЗДАЕМ</br>СПОРТИВНУЮ</br>ФОРМУ <span>ДЛЯ</br>ЧЕМПИОНОВ</span>"
+      h2.wow.wowFadeLeft(data-animation-delay="0.35s")!= "#БЕЗ ОГРАНИЧЕНИЙ: "
+      p.wow.wowFadeLeft(data-animation-delay="0.35s")!= "Количество, цвет и фасон на 100%</br>определяет заказчик. Вы сами</br>знаете, что вам нужно!"
 
       .banner__footer
-        .banner__box
+        .banner__box.wow.wowFadeLeft(data-animation-delay="0.35s")
           p!= "РАЗРАБОТАЙТЕ БЕСПЛАТНО МАКЕТ СВОЕЙ ФОРМЫ ПРЯМО СЕЙЧАС"
           a(href="#" title="")!= "СОЗДАТЬ МАКЕТ"
 
-        .banner__pagination
+        .banner__pagination.wow.wowFadeRight(data-animation-delay="0.35s")
           -for(var i = 0, len = paginationVal.length; i < len; i++)
             .banner__pagination-wrap
               a(href="#" title="" js-bannerBtn data-banner=paginationDataAttr[i] class= (i === 0) ? "is-active" : "")!= paginationVal[i]

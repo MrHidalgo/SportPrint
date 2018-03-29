@@ -13,9 +13,9 @@
 
       +titleBlock("СХЕМА", "РАБОТЫ")
 
-      .work__row
+      .work__row.wow.wowFadeUp(data-animation-delay="0.85s")
         -for(var i = 0, len = workArrName.length; i < len; i++)
-          .work__block
+          .work__block.wow.wowFadeUp(data-animation-delay="0." + (i + 5) + "5s")
             .work__circle
               +icon('ico-work-' + i)
               span!= "0" + (i + 1)
