@@ -1,0 +1,16 @@
+#callback.modal.mfp-hide.animated
+
+  form.modal__form(js-modal)
+
+    h2!= "ВЫ МОЖЕТЕ ЗАКАЗАТЬ</br>БЕСПЛАТНЫЙ МАКЕТ ФОРМЫ"
+
+    .modal__form-field
+      input(type="text" name="name" placeholder="Ваше имя:")
+    .modal__form-field
+      input(type="tel" name="phone" placeholder="Контактный телефон:")
+    .modal__form-field
+      input(type="text" name="email" placeholder="E-mail:")
+    .modal__form-field
+      input(type="text" name="address" placeholder="Адрес доставки:")
+
+    button(type="submit")!= "СОЗДАТЬ МАКЕТ"
