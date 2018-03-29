@@ -59,17 +59,23 @@
     &-slogan
       font-size: 20px
       color: rgba($colorBlack, 0.7)
+      +respondTo(mobile-max)
+        display: none
       +respondTo(tablet)
         font-size: 14px
 
     &-phone
       font-size: 36px
       font-weight: 500
+      +respondTo(mobile-max)
+      display: none
       +respondTo(tablet)
         font-size: 22px
 
     &-button
       padding-left: 65px
+      +respondTo(mobile-max)
+        padding-left: 0
       +respondTo(tablet)
         padding-left: 30px
 
@@ -82,6 +88,8 @@
         font-size: 20px
         font-weight: 500
         +transition(background-color)
+        +respondTo(mobile-max)
+          font-size: 16px
         +respondTo(tablet)
           font-size: 18px
 
@@ -96,6 +104,10 @@
       font-weight: 800
       line-height: 1.2
       color: $colorBlack
+      +respondTo(small-mobile)
+        font-size: 30px
+      +respondTo(large-mobile)
+        font-size: 50px
       +respondTo(tablet)
         margin-bottom: 25px
         font-size: 35px
@@ -112,6 +124,8 @@
       font-family: "KazmannSans", Arial, sans-serif
       font-weight: normal
       color: $colorDarkGoldenrod
+      +respondTo(mobile-max)
+        padding-left: 0
       +respondTo(tablet)
         padding-left: 30px
         padding-bottom: 10px
@@ -121,6 +135,8 @@
       padding-left: 50px
       padding-bottom: 38px
       font-size: 20px
+      +respondTo(mobile-max)
+        padding-left: 0
       +respondTo(tablet)
         padding-left: 30px
         padding-bottom: 25px
@@ -128,6 +144,9 @@
 
   &__footer
     position: relative
+    +respondTo(mobile-max)
+      display: flex
+      flex-direction: column
 
   &__box
     position: absolute
@@ -136,6 +155,9 @@
     max-width: 415px
     padding: 40px 48px
     background-color: $colorBlack
+    +respondTo(mobile-max)
+      order: 1
+      position: relative
     +respondTo(tablet)
       max-width: 315px
       padding: 25px
@@ -145,7 +167,7 @@
       font-size: 30px
       font-weight: 500
       color: $colorWhite
-      +respondTo(tablet)
+      +respondTo(tablet-max)
         padding-bottom: 20px
         font-size: 22px
 
@@ -159,7 +181,7 @@
       font-weight: 500
       letter-spacing: 0.5px
       +transition(background-color)
-      +respondTo(tablet)
+      +respondTo(tablet-max)
         font-size: 18px
 
       &:hover
@@ -167,6 +189,7 @@
         +transition(background-color)
 
   &__pagination
+    order: 0
     display: flex
     justify-content: space-between
     width: 100%
@@ -174,6 +197,10 @@
     margin-left: (415px + 80px)
     padding-top: 70px
     border-bottom: 1px solid rgba($colorWhite, 0.2)
+    +respondTo(mobile-max)
+      padding-top: 30px
+      margin-left: 0
+      margin-bottom: 15px
     +respondTo(tablet)
       max-width: 350px
       margin-left: (315px + 30px)
