@@ -123,6 +123,23 @@ $(document).ready(function(){
     $('.mobile-navi').removeClass('is-active');
   }
 
+  _document.on("click", "[js-bannerBtn]", function(e) {
+    var elem = $(e.target),
+      elemAttr = $(e.target).attr("data-banner");
+
+    $("[js-bannerBtn]").removeClass("is-active");
+
+    $(".banner__img")
+      .removeClass("is-active")
+      .addClass("fadeOut");
+
+    elem.addClass("is-active");
+
+    $("[data-img='"+ elemAttr +"']")
+      .addClass("is-active fadeIn")
+      .removeClass("fadeOut");
+  });
+
   // SET ACTIVE CLASS IN HEADER
   // * could be removed in production and server side rendering when header is inside barba-container
   function updateHeaderActiveClass(){

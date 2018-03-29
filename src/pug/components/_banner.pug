@@ -6,10 +6,50 @@
     "ВОЛЕЙБОЛ",
     "ХОККЕЙ"
   ];
-
+  var paginationDataAttr = [
+    "football",
+    "basketball",
+    "rugby",
+    "volleyball",
+    "hockey"
+  ];
 
 
 .banner
+
+  .banner__img-wrap
+
+    img(
+      src="./img/img-football__banner.jpg" srcset="./img/img-football__banner@2x.jpg 2x"
+      title=""
+      data-img="football"
+      class="banner__img animated is-active"
+      )
+    img(
+      src="./img/img-hockey__banner.jpg" srcset="./img/img-hockey__banner@2x.jpg 2x"
+      title=""
+      data-img="basketball"
+      class="banner__img animated"
+      )
+    img(
+      src="./img/img-football__banner.jpg" srcset="./img/img-football__banner@2x.jpg 2x"
+      title=""
+      data-img="rugby"
+      class="banner__img animated"
+      )
+    img(
+      src="./img/img-football__banner.jpg" srcset="./img/img-football__banner@2x.jpg 2x"
+      title=""
+      data-img="volleyball"
+      class="banner__img animated"
+      )
+    img(
+      src="./img/img-hockey__banner.jpg" srcset="./img/img-hockey__banner@2x.jpg 2x"
+      title=""
+      data-img="hockey"
+      class="banner__img animated"
+      )
+
   .container
 
     .banner__wrap
@@ -41,6 +81,6 @@
         .banner__pagination
           -for(var i = 0, len = paginationVal.length; i < len; i++)
             .banner__pagination-wrap
-              a(href="#" title="")!= paginationVal[i]
+              a(href="#" title="" js-bannerBtn data-banner=paginationDataAttr[i] class= (i === 0) ? "is-active" : "")!= paginationVal[i]
 
 
