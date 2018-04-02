@@ -44,23 +44,28 @@ $(document).ready(function(){
     // revealFooter();
     // _window.on('resize', throttle(revealFooter, 100));
 
-    var sceneBasketball = document.getElementById('scene-basketball');
-    var sceneVolleyball = document.getElementById('scene-volleyball');
-    var sceneRugby = document.getElementById('scene-rugby');
 
-    var parallaxBasketball = new Parallax(sceneBasketball);
-    var parallaxVolleyball = new Parallax(sceneVolleyball);
-    var parallaxRugby = new Parallax(sceneRugby);
   }
 
   // this is a master function which should have all functionality
   pageReady();
 
+  var sceneBasketball = document.getElementById('scene-basketball');
+  var sceneVolleyball = document.getElementById('scene-volleyball');
+  var sceneRugby = document.getElementById('scene-rugby');
+
+  var parallaxBasketball = {}, parallaxVolleyball = {}, parallaxRugby = {};
+
+  parallaxBasketball = new Parallax(sceneBasketball);
+  parallaxVolleyball = new Parallax(sceneVolleyball);
+  parallaxRugby = new Parallax(sceneRugby);
 
   // some plugins work best with onload triggers
   _window.on('load', function(){
     // your functions
-  })
+  });
+
+
 
 
   //////////
@@ -270,7 +275,6 @@ $(document).ready(function(){
     var reviewMain = document.querySelector("[js-reviewMain]");
     var exampleCurrent = document.querySelector("[js-exampleCurrent]");
     var exampleMain = document.querySelector("[js-exampleMain]");
-
 
     reviewMain.innerHTML = (swiperReviews.slides.length);
     exampleMain.innerHTML = (swiperExample.slides.length);
