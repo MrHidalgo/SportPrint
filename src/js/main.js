@@ -117,6 +117,11 @@ $(document).ready(function(){
     }, 1000);
   });
 
+  _document.on('click', ".logo__img", function (e) {
+    $('body, html').animate({
+      scrollTop: 0
+    }, 1000);
+  });
 
 
   // HEADER SCROLL
