@@ -91,11 +91,32 @@ $(document).ready(function(){
   		e.preventDefault();
   	})
     .on('click', 'a[href^="#section"]', function() { // section scroll
-      var el = $(this).attr('href');
-      $('body, html').animate({
-          scrollTop: $(el).offset().top}, 1000);
-      return false;
-    });
+        var el = $(this).attr('href');
+        $('body, html').animate({
+            scrollTop: $(el).offset().top}, 1000);
+        return false;
+      });
+
+
+  // SMOOTH SCROLL
+  $(".menu").on("click", "a", function (e) {
+    e.preventDefault();
+
+    var id          = $(this).attr('href'),
+      navHeight   = $(".header").outerHeight(),
+      topHeightOffset;
+
+    if ($(window).width() > '767') {
+      topHeightOffset = $(id).offset().top - navHeight
+    } else {
+      topHeightOffset = $(id).offset().top;
+    }
+
+    $('body, html').animate({
+      scrollTop: topHeightOffset
+    }, 1000);
+  });
+
 
 
   // HEADER SCROLL
