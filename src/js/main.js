@@ -106,7 +106,7 @@ $(document).ready(function(){
       navHeight   = $(".header").outerHeight(),
       topHeightOffset;
 
-    if ($(window).width() > '767') {
+    if ($(window).width() >= bp.tablet) {
       topHeightOffset = $(id).offset().top - navHeight
     } else {
       topHeightOffset = $(id).offset().top;
@@ -136,7 +136,7 @@ $(document).ready(function(){
       var visibleWhen = Math.round(_document.height() / _window.height()) >  2.5;
 
       if (visibleWhen){
-        if ( vScroll > 1 ){
+        if ( vScroll > 0 ){
           header.addClass('is-fixed');
         } else {
           header.removeClass('is-fixed');
