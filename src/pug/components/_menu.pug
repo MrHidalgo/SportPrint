@@ -6,10 +6,17 @@
     "ДОСТАВКА И ОПЛАТА",
     "ПРИМЕРЫ РАБОТ"
   ];
+  var menuHref = [
+    "quality",
+    "production",
+    "catalog",
+    "delivery",
+    "example"
+  ];
 
 .menu.animated
   -for(var i = 0, len = menuValue.length; i < len; i++)
     a(
-      href="#"
+      href="#" + menuHref[i]
       class="menu__item"
     )!= menuValue[i]
