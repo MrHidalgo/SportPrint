@@ -34,7 +34,7 @@ $(document).ready(function(){
     initLazyLoad();
 
     // development helper
-    _window.on('resize', debounce(setBreakpoint, 200))
+    _window.on('resize', debounce(setBreakpoint, 200));
 
     // AVAILABLE in _components folder
     // copy paste in main.js and initialize here
@@ -43,6 +43,14 @@ $(document).ready(function(){
     // parseSvg();
     // revealFooter();
     // _window.on('resize', throttle(revealFooter, 100));
+
+    var sceneBasketball = document.getElementById('scene-basketball');
+    var sceneVolleyball = document.getElementById('scene-volleyball');
+    var sceneRugby = document.getElementById('scene-rugby');
+
+    var parallaxBasketball = new Parallax(sceneBasketball);
+    var parallaxVolleyball = new Parallax(sceneVolleyball);
+    var parallaxRugby = new Parallax(sceneRugby);
   }
 
   // this is a master function which should have all functionality
@@ -82,7 +90,7 @@ $(document).ready(function(){
       $('body, html').animate({
           scrollTop: $(el).offset().top}, 1000);
       return false;
-    })
+    });
 
 
   // HEADER SCROLL
@@ -94,10 +102,10 @@ $(document).ready(function(){
       var header = $('.header').not('.header--static');
       var headerHeight = header.height();
       var firstSection = _document.find('.page__content div:first-child()').height() - headerHeight;
-      var visibleWhen = Math.round(_document.height() / _window.height()) >  2.5
+      var visibleWhen = Math.round(_document.height() / _window.height()) >  2.5;
 
       if (visibleWhen){
-        if ( vScroll > headerHeight ){
+        if ( vScroll > 1 ){
           header.addClass('is-fixed');
         } else {
           header.removeClass('is-fixed');
@@ -133,15 +141,15 @@ $(document).ready(function(){
 
     $("[js-bannerBtn]").removeClass("is-active");
 
-    $(".banner__img")
-      .removeClass("is-active")
-      .addClass("fadeOut");
+    if($(".banner__img").hasClass('is-active')) {
+      $(".banner__img")
+        .removeClass("is-active fadeIn");
+    }
 
     elem.addClass("is-active");
 
     $("[data-img='"+ elemAttr +"']")
-      .addClass("is-active fadeIn")
-      .removeClass("fadeOut");
+      .addClass("is-active fadeIn");
   });
 
   // SET ACTIVE CLASS IN HEADER

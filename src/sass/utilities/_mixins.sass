@@ -123,10 +123,8 @@
 // TRANSITION
 =transition($rest...)
   $list: null
-
   @each $prop in $rest
     $list: append($list, $prop 0.3s ease-in-out, comma)
-
   transition: $list
 
 

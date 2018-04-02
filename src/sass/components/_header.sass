@@ -1,12 +1,17 @@
 /* HEADER
 .header
-  z-index: 1
-  position: absolute
+  z-index: 10
+  position: fixed
   left: 0
   top: 0
   width: 100%
+  +transition(background-color)
   +respondTo(mobile-max)
     display: none
+
+  &.is-fixed
+    background-color: $colorWhiteSmoke
+    +transition(background-color)
 
   &__hamburger
     display: block

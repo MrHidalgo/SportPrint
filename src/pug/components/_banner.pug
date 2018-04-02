@@ -19,36 +19,68 @@
 
   .banner__img-wrap
 
-    img(
-      src="./img/img-football__banner.jpg" srcset="./img/img-football__banner@2x.jpg 2x"
-      title=""
-      data-img="football"
-      class="banner__img animated is-active"
+    .banner__img-row
+      img(
+        src="./img/img-football__banner.jpg" srcset="./img/img-football__banner@2x.jpg 2x"
+        title=""
+        data-img="football"
+        class="banner__img banner__img-bg animated is-active"
       )
-    img(
-      src="./img/img-hockey__banner.jpg" srcset="./img/img-hockey__banner@2x.jpg 2x"
-      title=""
-      data-img="basketball"
-      class="banner__img animated"
+    .banner__img-row#scene-basketball
+      .animated.banner__img.banner__img-bg(data-img="basketball")
+      img(
+          src="./img/img-basketball__banner-fog.png" srcset="./img/img-basketball__banner-fog@2x.png 2x"
+          title=""
+          data-img="basketball"
+          data-depth="1"
+          class="banner__img banner__img-fog animated"
+        )
+      img(
+          src="./img/img-basketball__banner-person.png" srcset="./img/img-basketball__banner-person@2x.png 2x"
+          title=""
+          data-img="basketball"
+          data-depth="1.5"
+          class="banner__img banner__img-person animated"
+        )
+    .banner__img-row#scene-rugby
+      .animated.banner__img.banner__img-bg(data-img="rugby")
+      img(
+        src="./img/img-rugby__banner-fog.png" srcset="./img/img-rugby__banner-fog@2x.png 2x"
+        title=""
+        data-img="rugby"
+        data-depth="1"
+        class="banner__img banner__img-fog animated"
       )
-    img(
-      src="./img/img-football__banner.jpg" srcset="./img/img-football__banner@2x.jpg 2x"
-      title=""
-      data-img="rugby"
-      class="banner__img animated"
+      img(
+        src="./img/img-rugby__banner-person.png" srcset="./img/img-rugby__banner-person@2x.png 2x"
+        title=""
+        data-img="rugby"
+        data-depth="1.5"
+        class="banner__img banner__img-person animated"
       )
-    img(
-      src="./img/img-football__banner.jpg" srcset="./img/img-football__banner@2x.jpg 2x"
-      title=""
-      data-img="volleyball"
-      class="banner__img animated"
+    .banner__img-row#scene-volleyball
+      .animated.banner__img.banner__img-bg(data-img="volleyball")
+      img(
+        src="./img/img-volleyball__banner-fog.png" srcset="./img/img-volleyball__banner-fog@2x.png 2x"
+        title=""
+        data-img="volleyball"
+        data-depth="1"
+        class="banner__img banner__img-fog animated"
       )
-    img(
-      src="./img/img-hockey__banner.jpg" srcset="./img/img-hockey__banner@2x.jpg 2x"
-      title=""
-      data-img="hockey"
-      class="banner__img animated"
+      img(
+        src="./img/img-volleyball__banner-person.png" srcset="./img/img-volleyball__banner-person@2x.png 2x"
+        title=""
+        data-img="volleyball"
+        data-depth="1.5"
+        class="banner__img banner__img-person animated"
       )
+    .banner__img-row
+      img(
+        src="./img/img-hockey__banner.jpg" srcset="./img/img-hockey__banner@2x.jpg 2x"
+        title=""
+        data-img="hockey"
+        class="banner__img banner__img-bg animated"
+        )
 
   .container
 
