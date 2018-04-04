@@ -280,6 +280,7 @@ $(document).ready(function(){
       slidesPerView: 1,
       spaceBetween: 30,
       mousewheel: true,
+      loop: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true
@@ -303,10 +304,10 @@ $(document).ready(function(){
     var exampleMain = document.querySelector("[js-exampleMain]");
 
     reviewMain.innerHTML = (swiperReviews.slides.length);
-    exampleMain.innerHTML = (swiperExample.slides.length);
+    exampleMain.innerHTML = (swiperExample.slides.length - 2);
 
     swiperExample.on('slideChange', function() {
-      exampleCurrent.innerHTML = swiperExample.activeIndex + 1;
+      exampleCurrent.innerHTML = swiperExample.realIndex + 1;
     });
     swiperReviews.on('slideChange', function() {
       reviewCurrent.innerHTML = swiperReviews.activeIndex + 1;
