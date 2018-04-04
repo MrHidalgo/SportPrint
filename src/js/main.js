@@ -99,6 +99,7 @@ $(document).ready(function(){
 
 
   // SMOOTH SCROLL
+  // ====================
   $(".menu").on("click", "a", function (e) {
     e.preventDefault();
 
@@ -117,6 +118,9 @@ $(document).ready(function(){
     }, 1000);
   });
 
+
+  // LOGO: return to homepage
+  // ====================
   _document.on('click', ".logo__img", function (e) {
     $('body, html').animate({
       scrollTop: 0
@@ -166,22 +170,25 @@ $(document).ready(function(){
     $('.mobile-navi').removeClass('is-active');
   }
 
+
+  // BANNER: change theme...
+  // ====================
   _document.on("click", "[js-bannerBtn]", function(e) {
     var elem = $(e.target),
-      elemAttr = $(e.target).attr("data-banner");
+      elemAttr = $(e.target).attr("data-banner"),
+      bannerImg = $(".banner__img");
 
     $("[js-bannerBtn]").removeClass("is-active");
 
-    if($(".banner__img").hasClass('is-active')) {
-      $(".banner__img")
-        .removeClass("is-active fadeIn");
+    if(bannerImg.hasClass('is-active')) {
+      bannerImg.removeClass("is-active fadeIn");
     }
 
     elem.addClass("is-active");
 
-    $("[data-img='"+ elemAttr +"']")
-      .addClass("is-active fadeIn");
+    $("[data-img='"+ elemAttr +"']").addClass("is-active fadeIn");
   });
+
 
   // SET ACTIVE CLASS IN HEADER
   // * could be removed in production and server side rendering when header is inside barba-container
@@ -298,20 +305,31 @@ $(document).ready(function(){
       }
     });
 
-    var reviewCurrent = document.querySelector("[js-reviewCurrent]");
-    var reviewMain = document.querySelector("[js-reviewMain]");
-    var exampleCurrent = document.querySelector("[js-exampleCurrent]");
-    var exampleMain = document.querySelector("[js-exampleMain]");
+
+    // REVIEW SLIDER: current index and main count
+    // ====================
+    var reviewCurrent = document.querySelector("[js-reviewCurrent]"),
+      reviewMain = document.querySelector("[js-reviewMain]");
 
     reviewMain.innerHTML = (swiperReviews.slides.length);
-    exampleMain.innerHTML = (swiperExample.slides.length - 2);
+
+    swiperReviews.on('slideChange', function() {
+      reviewCurrent.innerHTML = swiperReviews.activeIndex + 1;
+    });
+
+
+    // EXAMPLE SLIDER: current index and main count
+    // ====================
+    var exampleCurrent = document.querySelector("[js-exampleCurrent]"),
+      exampleMain = document.querySelector("[js-exampleMain]");
+
+    // -2 because slider loop, and we remove duplicate
+    exampleMain.innerHTML = swiperExample.slides.length - 2;
 
     swiperExample.on('slideChange', function() {
       exampleCurrent.innerHTML = swiperExample.realIndex + 1;
     });
-    swiperReviews.on('slideChange', function() {
-      reviewCurrent.innerHTML = swiperReviews.activeIndex + 1;
-    });
+
   }
 
   //////////
