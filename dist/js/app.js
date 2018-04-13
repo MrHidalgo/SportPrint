@@ -132,6 +132,19 @@ $(document).ready(function(){
   });
 
 
+  // BANNER FOG SCROLL
+  _window.on('scroll', throttle(function(e){
+    var fog = $('.banner__img-fog');
+    var wScroll = _window.scrollTop();
+    var power = 3;
+
+    var transformVal = wScroll / power;
+    fog.css({
+      'transform': 'translate3d(0,-'+transformVal+'px,0)'
+    });
+  }, 10))
+
+
   // HEADER SCROLL
   // add .header-static for .page or body
   // to disable sticky header

@@ -4354,6 +4354,48 @@ html.mfp-helper body {
   transition: background-color 0.3s ease-in-out;
 }
 
+.banner--second .banner__img-fog {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -100px;
+  z-index: 2;
+  background-image: url("../img/fog.png");
+  background-position: center bottom;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.banner--second .banner__img-bg {
+  background-attachment: local;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  background-position: center bottom;
+}
+
+.banner--second #scene-basketball .banner__img {
+  background-image: url("../img/img-basketball_bg.png");
+}
+
+.banner--second #scene-volleyball .banner__img {
+  background-image: url("../img/img-volleyball_bg.png");
+}
+
+.banner--second #scene-rugby .banner__img {
+  background-image: url("../img/img-rugby_bg.png");
+}
+
+.banner--second #scene-football .banner__img {
+  background-image: url("../img/img-football_bg.png");
+}
+
+.banner--second #scene-hockey .banner__img {
+  background-image: url("../img/img-hockey_bg.png");
+}
+
 .banner__wrap > h1 {
   margin-bottom: 23px;
   font-size: 60px;
