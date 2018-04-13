@@ -53,12 +53,16 @@ $(document).ready(function(){
   var sceneBasketball = document.getElementById('scene-basketball');
   var sceneVolleyball = document.getElementById('scene-volleyball');
   var sceneRugby = document.getElementById('scene-rugby');
+  var sceneFootball = document.getElementById('scene-football')
+  var sceneHockey = document.getElementById('scene-hockey')
 
-  var parallaxBasketball = {}, parallaxVolleyball = {}, parallaxRugby = {};
+  var parallaxBasketball = {}, parallaxVolleyball = {}, parallaxRugby = {}, parallaxFootball = {}, parallaxHockey = {};
 
   parallaxBasketball = new Parallax(sceneBasketball);
   parallaxVolleyball = new Parallax(sceneVolleyball);
   parallaxRugby = new Parallax(sceneRugby);
+  parallaxFootball = new Parallax(sceneFootball);
+  parallaxHockey = new Parallax(sceneHockey);
 
   // some plugins work best with onload triggers
   _window.on('load', function(){
@@ -405,6 +409,9 @@ $(document).ready(function(){
     $("[js-dateMask]").mask("99.99.99",{placeholder:"ДД.ММ.ГГ"});
     $("input[type='tel']").mask("+7 (000) 000-0000", {placeholder: "+7 (___) ___-____"});
   }
+
+  // tooltip
+  $('[data-toggle="tooltip"]').tooltip();
 
 
   ////////////

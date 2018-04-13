@@ -19,27 +19,42 @@
 
   .banner__img-wrap
 
-    .banner__img-row
+    .banner__img-row#scene-football
+      //- img(
+      //-   src="./img/img-football__banner.jpg" srcset="./img/img-football__banner@2x.jpg 2x"
+      //-   title=""
+      //-   data-img="football"
+      //-   class="banner__img banner__img-bg animated is-active"
+      //- )
+      .animated.banner__img.banner__img-bg.is-active.fadeIn(data-img="football")
       img(
-        src="./img/img-football__banner.jpg" srcset="./img/img-football__banner@2x.jpg 2x"
-        title=""
-        data-img="football"
-        class="banner__img banner__img-bg animated is-active"
-      )
+          src="./img/img-football__banner-fog.png" srcset="./img/img-football__banner-fog@2x.png 2x"
+          title=""
+          data-img="football"
+          data-depth="0.6"
+          class="banner__img banner__img-fog animated is-active"
+        )
+      img(
+          src="./img/img-football__banner-person.png" srcset="./img/img-football__banner-person@2x.png 2x"
+          title=""
+          data-img="football"
+          data-depth="0.25"
+          class="banner__img banner__img-person animated is-active"
+        )
     .banner__img-row#scene-basketball
       .animated.banner__img.banner__img-bg(data-img="basketball")
       img(
           src="./img/img-basketball__banner-fog.png" srcset="./img/img-basketball__banner-fog@2x.png 2x"
           title=""
           data-img="basketball"
-          data-depth="0.5"
+          data-depth="0.6"
           class="banner__img banner__img-fog animated"
         )
       img(
           src="./img/img-basketball__banner-person.png" srcset="./img/img-basketball__banner-person@2x.png 2x"
           title=""
           data-img="basketball"
-          data-depth="1"
+          data-depth="0.25"
           class="banner__img banner__img-person animated"
         )
     .banner__img-row#scene-rugby
@@ -48,14 +63,14 @@
         src="./img/img-rugby__banner-fog.png" srcset="./img/img-rugby__banner-fog@2x.png 2x"
         title=""
         data-img="rugby"
-        data-depth="0.5"
+        data-depth="0.6"
         class="banner__img banner__img-fog animated"
       )
       img(
         src="./img/img-rugby__banner-person.png" srcset="./img/img-rugby__banner-person@2x.png 2x"
         title=""
         data-img="rugby"
-        data-depth="1"
+        data-depth="0.25"
         class="banner__img banner__img-person animated"
       )
     .banner__img-row#scene-volleyball
@@ -64,22 +79,31 @@
         src="./img/img-volleyball__banner-fog.png" srcset="./img/img-volleyball__banner-fog@2x.png 2x"
         title=""
         data-img="volleyball"
-        data-depth="0.5"
+        data-depth="0.6"
         class="banner__img banner__img-fog animated"
       )
       img(
         src="./img/img-volleyball__banner-person.png" srcset="./img/img-volleyball__banner-person@2x.png 2x"
         title=""
         data-img="volleyball"
-        data-depth="1"
+        data-depth="0.25"
         class="banner__img banner__img-person animated"
       )
-    .banner__img-row
+    .banner__img-row#scene-hockey
+      .animated.banner__img.banner__img-bg(data-img="hockey")
+      //- img(
+      //-     src="./img/img-hockey__banner-fog.png" srcset="./img/img-hockey__banner-fog@2x.png 2x"
+      //-     title=""
+      //-     data-img="hockey"
+      //-     data-depth="0.6"
+      //-     class="banner__img banner__img-fog animated"
+      //-   )
       img(
-        src="./img/img-hockey__banner.jpg" srcset="./img/img-hockey__banner@2x.jpg 2x"
-        title=""
-        data-img="hockey"
-        class="banner__img banner__img-bg animated"
+          src="./img/img-hockey__banner-person.png" srcset="./img/img-hockey__banner-person@2x.png 2x"
+          title=""
+          data-img="hockey"
+          data-depth="0.25"
+          class="banner__img banner__img-person animated"
         )
 
   .container
@@ -114,11 +138,9 @@
       .banner__footer
         .banner__box.wow.wowFadeLeft(data-animation-delay="0.35s")
           p!= "РАЗРАБОТАЙТЕ БЕСПЛАТНО МАКЕТ СВОЕЙ ФОРМЫ ПРЯМО СЕЙЧАС"
-          a(href="#" title="")!= "СОЗДАТЬ МАКЕТ"
+          a(href="#callback" title="" js-popup)!= "СОЗДАТЬ МАКЕТ"
 
         .banner__pagination.wow.wowFadeRight(data-animation-delay="0.35s")
           -for(var i = 0, len = paginationVal.length; i < len; i++)
             .banner__pagination-wrap
               a(href="#" title="" js-bannerBtn data-banner=paginationDataAttr[i] class= (i === 0) ? "is-active" : "")!= paginationVal[i]
-
-

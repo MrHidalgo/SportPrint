@@ -17,50 +17,34 @@
     position: absolute
 
     &-bg
-      top: 50%
-      left: 50%
+      top: 0
+      left: 0
       opacity: 0
-      width: auto
-      height: auto
+      width: 100%
+      height: 100%
       max-height: none
       max-width: none
       min-height: 100%
       min-width: 100%
       transform: translate(-50%, -50%)
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+      background-attachment: fixed
 
       .is-active &
         opacity: 1
 
       #scene-basketball &
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
         background-image: url("../img/img-basketball__banner-bg.png")
-        background-repeat: no-repeat
-        background-position: center
-        background-size: cover
-        background-attachment: fixed
       #scene-volleyball &
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
         background-image: url("../img/img-volleyball__banner-bg.png")
-        background-repeat: no-repeat
-        background-position: center
-        background-size: cover
-        background-attachment: fixed
       #scene-rugby &
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
         background-image: url("../img/img-rugby__banner-bg.png")
-        background-repeat: no-repeat
-        background-position: center
-        background-size: cover
-        background-attachment: fixed
+      #scene-football &
+        background-image: url("../img/img-football__banner-bg.png")
+      #scene-hockey &
+        background-image: url("../img/img-hockey__banner-bg.png")
 
     &-person
       max-width: 100%
@@ -69,17 +53,25 @@
         display: none !important
 
       #scene-basketball &
-        left: 45% !important
+        left: 30% !important
         top: auto !important
         bottom: -15% !important
       #scene-volleyball &
-        left: 50% !important
-        top: auto !important
-        bottom: -20% !important
-      #scene-rugby &
-        left: 60% !important
+        left: 35% !important
         top: auto !important
         bottom: -15% !important
+      #scene-rugby &
+        left: 40% !important
+        top: auto !important
+        bottom: -10% !important
+      #scene-football &
+        left: 30% !important
+        top: auto !important
+        bottom: 0% !important
+      #scene-hockey &
+        left: 53% !important
+        top: auto !important
+        bottom: 2% !important
 
     &.is-active
       opacity: 1
@@ -312,5 +304,3 @@
         &.is-active
           border-bottom-color: $colorBirdFlower
           +transition(border-color)
-
-

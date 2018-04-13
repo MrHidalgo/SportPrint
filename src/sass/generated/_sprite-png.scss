@@ -1,11 +1,20 @@
 $sprite: (
+	checkmark: (
+		offset-x: 0px,
+		offset-y: -36px,
+		width: 11px,
+		height: 8px,
+		total-width: 56px,
+		total-height: 44px,
+		image: '../img/sprite.png'
+	),
 	in: (
 		offset-x: -36px,
 		offset-y: 0px,
 		width: 20px,
 		height: 20px,
 		total-width: 56px,
-		total-height: 26px,
+		total-height: 44px,
 		image: '../img/sprite.png'
 	),
 	preview: (
@@ -14,7 +23,7 @@ $sprite: (
 		width: 26px,
 		height: 26px,
 		total-width: 56px,
-		total-height: 26px,
+		total-height: 44px,
 		image: '../img/sprite.png'
 	),
 );
@@ -73,6 +82,9 @@ $sprite: (
 
 
 
+	.icon-checkmark {
+		@include sprite(checkmark)
+	}
 	.icon-in {
 		@include sprite(in)
 	}

@@ -15,8 +15,7 @@
     }
   },
   "author": [
-    "Sergey Khmelevskoy <sergey@khmelevskoy.co>",
-    "Andrii Kovalenko <hkovalenko9@gmail.com>"
+    "Sergey Khmelevskoy <sergey@khmelevskoy.co>"
   ],
   "license": "ISC",
   "dependencies": {
