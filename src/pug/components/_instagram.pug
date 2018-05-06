@@ -5,7 +5,7 @@
 
     .instagram__row
       -for(var i = 0; i < 8; i++)
-        .instagram__block.wow.wowFadeUp(data-animation-delay="0." + (i + 2) + "5s")
+        a(href="http://instagram.com" target="_blank").instagram__block.wow.wowFadeUp(data-animation-delay="0." + (i + 2) + "5s")
 
           img(
             src="./img/img__instagram-" + i + ".jpg"

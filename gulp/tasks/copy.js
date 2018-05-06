@@ -13,6 +13,12 @@ gulp.task('copy:vendor', function() {
     .pipe(gulp.dest(config.dest.vendor));
 });
 
+gulp.task('copy:php', function() {
+  return gulp
+    .src(config.src.php + '/**/*.*')
+    .pipe(gulp.dest(config.dest.php));
+});
+
 gulp.task('copy:rootfiles', function() {
   return gulp
     .src(config.src.root + '/*.*')
@@ -26,6 +32,7 @@ gulp.task('copy', [
 ]);
 
 gulp.task('copy:watch', function() {
+  gulp.watch(config.src.php + '/**/*.*', ['copy:php']);
   gulp.watch(config.src.vendor + '/**/*.*', ['copy:vendor']);
   gulp.watch(config.src.root + '/*.*', ['copy:rootfiles']);
 });

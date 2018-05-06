@@ -989,7 +989,7 @@ img.mfp-img {
 }
 
 /**
- * Swiper 4.2.2
+ * Swiper 4.2.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * http://www.idangero.us/swiper/
  *
@@ -997,7 +997,7 @@ img.mfp-img {
  *
  * Released under the MIT License
  *
- * Released on: April 1, 2018
+ * Released on: March 16, 2018
  */
 .swiper-container {
   margin: 0 auto;
@@ -1412,16 +1412,14 @@ button.swiper-pagination-bullet {
   transform-origin: right top;
 }
 
-.swiper-container-horizontal > .swiper-pagination-progressbar,
-.swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+.swiper-container-horizontal > .swiper-pagination-progressbar {
   width: 100%;
   height: 4px;
   left: 0;
   top: 0;
 }
 
-.swiper-container-vertical > .swiper-pagination-progressbar,
-.swiper-container-horizontal > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+.swiper-container-vertical > .swiper-pagination-progressbar {
   width: 4px;
   height: 100%;
   left: 0;
@@ -3565,6 +3563,19 @@ button:focus {
   resize: vertical;
 }
 
+.ui-input__validation {
+  display: inline-block;
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.ui-checkbox .ui-input__validation {
+  -webkit-transform: translateY(5px);
+      -ms-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
 .ui-checkbox input {
   display: none;
   width: 0.1px;
@@ -3575,28 +3586,28 @@ button:focus {
   left: 0;
 }
 
-.ui-checkbox input:checked + label:before {
+.ui-checkbox input:checked + label:not(.ui-input__validation):before {
   background: #d1be00 !important;
 }
 
-.ui-checkbox input:checked + label:after {
+.ui-checkbox input:checked + label:not(.ui-input__validation):after {
   -webkit-transform: translateY(-50%) scale(1);
       -ms-transform: translateY(-50%) scale(1);
           transform: translateY(-50%) scale(1);
 }
 
-.ui-checkbox label {
+.ui-checkbox label:not(.ui-input__validation) {
   display: block;
   width: 100%;
   position: relative;
   cursor: pointer;
 }
 
-.ui-checkbox label:hover:before, .ui-checkbox label:focus:before {
+.ui-checkbox label:not(.ui-input__validation):hover:before, .ui-checkbox label:not(.ui-input__validation):focus:before {
   background-color: rgba(209, 190, 0, 0.3);
 }
 
-.ui-checkbox label:before {
+.ui-checkbox label:not(.ui-input__validation):before {
   position: absolute;
   left: 0;
   top: 50%;
@@ -3619,7 +3630,7 @@ button:focus {
   transition: all 0.25s ease-in-out;
 }
 
-.ui-checkbox label:after {
+.ui-checkbox label:not(.ui-input__validation):after {
   position: absolute;
   left: 13px;
   top: 50%;
@@ -3641,14 +3652,14 @@ button:focus {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .ui-checkbox label:after {
+  .ui-checkbox label:not(.ui-input__validation):after {
     -webkit-background-size: 56px 44px;
             background-size: 56px 44px;
     background-image: url("../img/sprite@2x.png");
   }
 }
 
-.ui-checkbox label span {
+.ui-checkbox label:not(.ui-input__validation) span {
   display: inline-block;
   padding-left: 45px;
   vertical-align: top;
@@ -3657,11 +3668,11 @@ button:focus {
   cursor: pointer;
 }
 
-.ui-checkbox label span a {
+.ui-checkbox label:not(.ui-input__validation) span a {
   text-decoration: underline;
 }
 
-.ui-checkbox label span a:hover, .ui-checkbox label span a:focus {
+.ui-checkbox label:not(.ui-input__validation) span a:hover, .ui-checkbox label:not(.ui-input__validation) span a:focus {
   text-decoration: none;
 }
 
@@ -5169,6 +5180,7 @@ html.mfp-helper body {
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  max-height: 627px;
 }
 
 @media screen and (max-width: 575px) {
@@ -6463,6 +6475,10 @@ html.mfp-helper body {
   background-color: #fff;
 }
 
+.modal--wide {
+  max-width: 1200px;
+}
+
 .show .modal {
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
@@ -6474,6 +6490,50 @@ html.mfp-helper body {
   font-size: 30px;
   font-weight: 500;
   padding-bottom: 45px;
+}
+
+.modal__form h1, .modal__form h3, .modal__form h4, .modal__form h5 {
+  font-weight: 500;
+  margin: 1em 0;
+}
+
+.modal__form h3 {
+  font-size: 24px;
+}
+
+.modal__form h4 {
+  font-size: 20px;
+}
+
+.modal__form p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.modal__form ul {
+  margin: 1em 0;
+  padding: 0;
+}
+
+.modal__form ul li {
+  display: block;
+  margin-bottom: .5em;
+  position: relative;
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+.modal__form ul li:before {
+  display: inline-block;
+  content: ' ';
+  width: 5px;
+  height: 5px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: currentColor;
+  position: absolute;
+  left: 0;
+  top: 7px;
 }
 
 .modal__form button {

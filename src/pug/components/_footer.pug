@@ -23,10 +23,10 @@ footer.footer
           .footer__row-wrap
             a(href="tel:89007973569")!= "8 (900) 797-3569"
 
-            a(href="#" data-toggle="tooltip" data-placement="top" title="viber available")
+            a(href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="viber available")
               +icon('ico-viber')
 
-            a(href="#" data-toggle="tooltip" data-placement="top" title="whatsapp available")
+            a(href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="whatsapp available")
               +icon('ico-whatsapp')
 
           .footer__row-wrap
@@ -41,7 +41,8 @@ footer.footer
         .footer__row.footer__row--privacy
 
           p!= "Разработка сайта — <a href='http://Bofer.ru' target='_blank'>Bofer.ru</a>"
-          p!= "Политика конфиденциальности"
+          p 
+            a(href="#policy" js-popup) Политика конфиденциальности
 
 
 // FOOTER :: END
