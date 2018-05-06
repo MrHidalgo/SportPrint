@@ -617,7 +617,7 @@ $(document).ready(function(){
               $(form).find('input').val('');
               // hide form
               // closeMfp();
-
+              console.log(data.message)
               // paste sucess message
               $('#thanks').find('[data-message]').html(data.message);
 

@@ -605,58 +605,43 @@ $(document).ready(function(){
       unhighlight: validateUnhighlight,
       submitHandler: function(form) {
         $(form).addClass('loading');
-        // show modal
-        $.magnificPopup.open({
-          items: {
-            src: '#thanks'
-          },
-          type: 'inline',
-          fixedContentPos: true,
-          fixedBgPos: true,
-          overflowY: 'auto',
-          closeBtnInside: true,
-          preloader: false,
-          midClick: true,
-          removalDelay: 300,
-          mainClass: 'show',
-        });
-        // $.ajax({
-        //   type: "POST",
-        //   url: 'php/callback.php',
-        //   data: $(form).serialize(),
-        //   success: function(response) {
-        //     $(form).removeClass('loading');
-        //     var data = $.parseJSON(response);
-        //     if (data.success == true) {
-        //       // blank all values
-        //       $(form).find('input').val('');
-        //       // hide form
-        //       // closeMfp();
-        //
-        //       // paste sucess message
-        //       $('#thanks').find('[data-message]').html(data.message);
-        //
-        //       // show modal
-        //       $.magnificPopup.open({
-        //         items: {
-        //           src: '#thanks'
-        //         },
-        //         type: 'inline',
-        //         fixedContentPos: true,
-        //         fixedBgPos: true,
-        //         overflowY: 'auto',
-        //         closeBtnInside: true,
-        //         preloader: false,
-        //         midClick: true,
-        //         removalDelay: 300,
-        //         mainClass: 'show',
-        //       });
-        //
-        //     } else {
-        //       $(form).find('[data-message]').html(data.message);
-        //     }
-        //   }
-        // })
+        $.ajax({
+          type: "POST",
+          url: 'php/callback.php',
+          data: $(form).serialize(),
+          success: function(response) {
+            $(form).removeClass('loading');
+            var data = $.parseJSON(response);
+            if (data.success == true) {
+              // blank all values
+              $(form).find('input').val('');
+              // hide form
+              // closeMfp();
+              console.log(data.message)
+              // paste sucess message
+              $('#thanks').find('[data-message]').html(data.message);
+
+              // show modal
+              $.magnificPopup.open({
+                items: {
+                  src: '#thanks'
+                },
+                type: 'inline',
+                fixedContentPos: true,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'show',
+              });
+
+            } else {
+              $(form).find('[data-message]').html(data.message);
+            }
+          }
+        })
 
       },
       rules: {
