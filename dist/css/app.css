@@ -5220,11 +5220,16 @@ html.mfp-helper body {
   line-height: 1.5;
 }
 
+.example__text--mobile {
+  display: none;
+}
+
 @media screen and (max-width: 575px) {
   .example__text {
     padding-top: 30px;
     padding-left: 30px;
     font-size: 30px;
+    display: block;
   }
 }
 
@@ -5232,6 +5237,7 @@ html.mfp-helper body {
   .example__text {
     padding-left: 60px;
     font-size: 50px;
+    display: block;
   }
 }
 
