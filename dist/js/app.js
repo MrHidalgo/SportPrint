@@ -307,8 +307,34 @@ $(document).ready(function(){
       pagination: {
         el: '.swiper-pagination',
         clickable: true
-      }
+      },
+      on: {
+        init: function(){
+          fixVerticalSliders();
+        },
+      },
     });
+
+    function fixVerticalSliders(){
+      var container = $('.reviews__row');
+      if ( _window.width() < 575 ){
+        var slide = container.find('.swiper-slide-active');
+        var height = 0;
+
+        height = height + $('.reviews__row-center').outerHeight();
+        height = height + $('.reviews__row-right').outerHeight();
+
+        container.css({
+          'height': height + 30
+        })
+      } else {
+        container.css({
+          'height': 590
+        })
+      }
+    };
+
+    _window.on('resize', debounce(fixVerticalSliders, 200));
 
 
     // REVIEW SLIDER: current index and main count
