@@ -32,19 +32,7 @@ $(document).ready(function(){
     initScrollMonitor();
     initMasks();
     initLazyLoad();
-
-    // development helper
-    _window.on('resize', debounce(setBreakpoint, 200));
-
-    // AVAILABLE in _components folder
-    // copy paste in main.js and initialize here
-
-    // initTeleport();
-    // parseSvg();
-    // revealFooter();
-    // _window.on('resize', throttle(revealFooter, 100));
-
-
+    initValidations();
   }
 
   // this is a master function which should have all functionality
@@ -319,8 +307,34 @@ $(document).ready(function(){
       pagination: {
         el: '.swiper-pagination',
         clickable: true
-      }
+      },
+      on: {
+        init: function(){
+          fixVerticalSliders();
+        },
+      },
     });
+
+    function fixVerticalSliders(){
+      var container = $('.reviews__row');
+      if ( _window.width() < 575 ){
+        var slide = container.find('.swiper-slide-active');
+        var height = 0;
+
+        height = height + $('.reviews__row-center').outerHeight();
+        height = height + $('.reviews__row-right').outerHeight();
+
+        container.css({
+          'height': height + 30
+        })
+      } else {
+        container.css({
+          'height': 590
+        })
+      }
+    };
+
+    _window.on('resize', debounce(fixVerticalSliders, 200));
 
 
     // REVIEW SLIDER: current index and main count
@@ -572,26 +586,113 @@ $(document).ready(function(){
     $(window).resize();
   }
 
-  //////////
-  // DEVELOPMENT HELPER
-  //////////
-  function setBreakpoint(){
-    var wHost = window.location.host.toLowerCase()
-    var displayCondition = wHost.indexOf("localhost") >= 0 || wHost.indexOf("surge") >= 0
-    if (displayCondition){
-      console.log(displayCondition)
-      var wWidth = _window.width();
+  ////////////////
+  // FORM VALIDATIONS
+  ////////////////
 
-      var content = "<div class='dev-bp-debug'>"+wWidth+"</div>";
-
-      $('.page').append(content);
-      setTimeout(function(){
-        $('.dev-bp-debug').fadeOut();
-      },1000);
-      setTimeout(function(){
-        $('.dev-bp-debug').remove();
-      },1500)
+  function initValidations(){
+    var validateErrorPlacement = function(error, element) {
+      error.addClass('ui-input__validation');
+      error.appendTo(element.parent("div"));
     }
+    var validateHighlight = function(element) {
+      $(element).parent('div').addClass("has-error");
+    }
+    var validateUnhighlight = function(element) {
+      $(element).parent('div').removeClass("has-error");
+    }
+
+    var validatePhone = {
+      required: true,
+      normalizer: function(value) {
+          var PHONE_MASK = '+X (XXX) XXX-XXXX';
+          if (!value || value === PHONE_MASK) {
+              return value;
+          } else {
+              return value.replace(/[^\d]/g, '');
+          }
+      },
+      minlength: 11,
+      digits: true
+    }
+
+
+    $.validator.setDefaults({
+      ignore: [],
+      // any other default options and/or rules
+    });
+
+    /////////////////////
+    // CB FORM
+    ////////////////////
+    $("[js-modal]").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: function(form) {
+        $(form).addClass('loading');
+        $.ajax({
+          type: "POST",
+          url: 'php/callback.php',
+          data: $(form).serialize(),
+          success: function(response) {
+            $(form).removeClass('loading');
+            var data = $.parseJSON(response);
+            if (data.success == true) {
+              // blank all values
+              $(form).find('input').val('');
+              // hide form
+              // closeMfp();
+              console.log(data.message)
+              // paste sucess message
+              $('#thanks').find('[data-message]').html(data.message);
+
+              // show modal
+              $.magnificPopup.open({
+                items: {
+                  src: '#thanks'
+                },
+                type: 'inline',
+                fixedContentPos: true,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'show',
+              });
+
+            } else {
+              $(form).find('[data-message]').html(data.message);
+            }
+          }
+        })
+
+      },
+      rules: {
+        name: "required",
+        agree: "required",
+        email: {
+          required: true,
+          email: true
+        },
+        phone: validatePhone
+      },
+      messages: {
+        name: "Заполните это поле",
+        email: {
+            required: "Заполните это поле",
+            email: "Email содержит неправильный формат"
+        },
+        phone: {
+          required: "Заполните это поле",
+          minlength: "Введите не менее 11 символов",
+          phone: "Введите корректный телефон"
+        },
+        agree: "Вы должны согласиться с условиями"
+      }
+    });
   }
 
 });

@@ -89,6 +89,7 @@
     right: 0
     margin-left: auto
     margin-right: auto
+    max-height: 627px
     +respondTo(small-mobile)
       max-width: 100%
       max-height: 70%
@@ -110,16 +111,22 @@
       weight: 800
     color: $colorWhite
     line-height: 1.5
+    &--mobile
+      display: none
     +respondTo(small-mobile)
       padding-top: 30px
       padding-left: 30px
       font-size: 30px
+      display: block
     +respondTo(large-mobile)
       padding-left: 60px
       font-size: 50px
+      display: block
+
     +respondTo(tablet)
       padding-left: 35px
       font-size: 60px
+
     +respondTo(wide)
       padding-left: 70px
       font-size: 70px

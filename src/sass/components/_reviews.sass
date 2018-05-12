@@ -44,7 +44,7 @@
     position: relative
     height: 590px
     +respondTo(small-mobile)
-
+      // height: auto
     &-left
       margin-right: 90px
       +respondTo(tablet-max)
@@ -140,6 +140,8 @@
         justify-content: center
         width: calc(100% - 115px)
         +respondTo(small-mobile)
+          // flex: 0 0 auto
+          // height: auto
           display: block
         +respondTo(tablet-max)
           width: 100%

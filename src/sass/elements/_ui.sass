@@ -21,8 +21,15 @@
     resize: vertical
 
 
+.ui-input__validation
+  display: inline-block
+  transform: translateY(-10px)
+
 // Checkbox
 .ui-checkbox
+  .ui-input__validation
+    transform: translateY(5px)
+
   input
     display: none
     width: 0.1px
@@ -32,12 +39,12 @@
     top: 0
     left: 0
     &:checked
-      + label
+      + label:not(.ui-input__validation)
         &::before
           background: $colorBirdFlower !important
         &::after
           transform: translateY(-50%) scale(1)
-  label
+  label:not(.ui-input__validation)
     display: block
     width: 100%
     position: relative
