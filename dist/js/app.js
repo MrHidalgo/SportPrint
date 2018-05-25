@@ -208,6 +208,8 @@ $(document).ready(function(){
   }
 
 
+  // Choose file...
+  // ====================
   var inputs = document.querySelectorAll('[inputfile-js]');
   Array.prototype.forEach.call(inputs, function(el) {
     var label	 = el.nextElementSibling,
@@ -224,6 +226,17 @@ $(document).ready(function(){
         label.innerHTML = labelVal;
     });
   });
+
+  // Zoom image...
+  // ====================
+  $('[zoom-img-js]')
+    .wrap('<span style="display:inline-block"></span>')
+    .css('display', 'block')
+    .parent()
+    .zoom({
+      magnify: 1
+    });
+
 
   //////////
   // SLIDERS
@@ -306,11 +319,15 @@ $(document).ready(function(){
 
     // SWIPER
     var swiperExample = new Swiper('.js-sliderExample', {
-      direction: 'vertical',
+      // direction: 'vertical',
       slidesPerView: 1,
       spaceBetween: 30,
-      mousewheel: true,
+      // mousewheel: true,
       loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
       pagination: {
         el: '.swiper-pagination',
         clickable: true
@@ -369,15 +386,15 @@ $(document).ready(function(){
 
     // EXAMPLE SLIDER: current index and main count
     // ====================
-    var exampleCurrent = document.querySelector("[js-exampleCurrent]"),
-      exampleMain = document.querySelector("[js-exampleMain]");
+    // var exampleCurrent = document.querySelector("[js-exampleCurrent]"),
+    //   exampleMain = document.querySelector("[js-exampleMain]");
 
     // -2 because slider loop, and we remove duplicate
-    exampleMain.innerHTML = swiperExample.slides.length - 2;
+    // exampleMain.innerHTML = swiperExample.slides.length - 2;
 
-    swiperExample.on('slideChange', function() {
-      exampleCurrent.innerHTML = swiperExample.realIndex + 1;
-    });
+    // swiperExample.on('slideChange', function() {
+    //   exampleCurrent.innerHTML = swiperExample.realIndex + 1;
+    // });
 
   }
 

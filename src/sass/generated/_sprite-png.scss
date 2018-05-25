@@ -1,20 +1,38 @@
 $sprite: (
 	checkmark: (
-		offset-x: 0px,
-		offset-y: -36px,
+		offset-x: -62px,
+		offset-y: -30px,
 		width: 11px,
 		height: 8px,
-		total-width: 56px,
-		total-height: 44px,
+		total-width: 82px,
+		total-height: 68px,
 		image: '../img/sprite.png'
 	),
 	in: (
-		offset-x: -36px,
+		offset-x: -62px,
 		offset-y: 0px,
 		width: 20px,
 		height: 20px,
-		total-width: 56px,
-		total-height: 44px,
+		total-width: 82px,
+		total-height: 68px,
+		image: '../img/sprite.png'
+	),
+	next: (
+		offset-x: 0px,
+		offset-y: -36px,
+		width: 16px,
+		height: 32px,
+		total-width: 82px,
+		total-height: 68px,
+		image: '../img/sprite.png'
+	),
+	prev: (
+		offset-x: -36px,
+		offset-y: 0px,
+		width: 16px,
+		height: 32px,
+		total-width: 82px,
+		total-height: 68px,
 		image: '../img/sprite.png'
 	),
 	preview: (
@@ -22,8 +40,8 @@ $sprite: (
 		offset-y: 0px,
 		width: 26px,
 		height: 26px,
-		total-width: 56px,
-		total-height: 44px,
+		total-width: 82px,
+		total-height: 68px,
 		image: '../img/sprite.png'
 	),
 );
@@ -87,6 +105,12 @@ $sprite: (
 	}
 	.icon-in {
 		@include sprite(in)
+	}
+	.icon-next {
+		@include sprite(next)
+	}
+	.icon-prev {
+		@include sprite(prev)
 	}
 	.icon-preview {
 		@include sprite(preview)

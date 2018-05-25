@@ -1,47 +1,34 @@
 .example#example
   .container
 
+    +titleBlock("ПРИМЕРЫ ", "РАБОТ")
+
     .example__row.wow.wowFadeUp(data-animation-delay="0.85s")
       .swiper-container.js-sliderExample
 
         .swiper-wrapper
           .swiper-slide
-            p.example__text!= "ПРИ-</br>МЕРЫ</br>РАБОТ"
             img(
-              src="./img/img-example-1.png"
-              srcset="./img/img-example-1@2x.png 2x"
+              src="./img/img-example__forms-0.png"
+              srcset="./img/img-example__forms-0@2x.png 2x"
               class="example__img"
               alt=""
-            )
-          //- .swiper-slide
-          //-   //- p.example__text!= "ПРИ-</br>МЕРЫ</br>РАБОТ"
-          //-   img(
-          //-     src="./img/img-example-2.png"
-          //-     srcset="./img/img-example-2@2x.png 2x"
-          //-     class="example__img"
-          //-     alt=""
-          //-   )
+              zoom-img-js)
           .swiper-slide
-            p.example__text.example__text--mobile!= "ПРИ-</br>МЕРЫ</br>РАБОТ"
             img(
-              src="./img/img-example-3.png"
-              srcset="./img/img-example-3@2x.png 2x"
+              src="./img/img-example__forms-0.png"
+              srcset="./img/img-example__forms-0@2x.png 2x"
               class="example__img"
               alt=""
-            )
+              zoom-img-js)
           .swiper-slide
-            p.example__text.example__text--mobile!= "ПРИ-</br>МЕРЫ</br>РАБОТ"
             img(
-              src="./img/img-example-4.png"
-              srcset="./img/img-example-4@2x.png 2x"
+              src="./img/img-example__forms-0.png"
+              srcset="./img/img-example__forms-0@2x.png 2x"
               class="example__img"
               alt=""
-            )
+              zoom-img-js)
 
-
-        .example__count
-          span.example__count-current(js-exampleCurrent)!= "1"
-          span.example__count-sign!= "/"
-          span.example__count-main(js-exampleMain)!= ""
-
-        .swiper-pagination
+        .swiper-button-next
+        .swiper-button-prev
+      .swiper-pagination
