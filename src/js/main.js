@@ -208,15 +208,15 @@ $(document).ready(function(){
   }
 
 
-  var inputs = document.querySelectorAll('.inputfile');
-  Array.prototype.forEach.call( inputs, function( input ) {
-    var label	 = input.nextElementSibling,
+  var inputs = document.querySelectorAll('[inputfile-js]');
+  Array.prototype.forEach.call(inputs, function(el) {
+    var label	 = el.nextElementSibling,
       labelVal = label.innerHTML;
 
-    input.addEventListener( 'change', function( e ) {
+    el.addEventListener('change', function(ev) {
       var fileName = '';
 
-      fileName = e.target.value.split('\\').pop();
+      fileName = ev.target.value.split('\\').pop();
 
       if(fileName)
         label.querySelector('span').innerHTML = fileName;
