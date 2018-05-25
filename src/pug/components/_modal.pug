@@ -12,6 +12,11 @@
       input(type="text" name="email" placeholder="E-mail:")
     .modal__form-field
       input(type="text" name="address" placeholder="Комментарий:")
+    .modal__form-field.modal__form-field--hidden
+      input(type="file" name="file" id="file" class="inputfile")
+      label(for="file")
+        p!= "приложить файл"
+        span
     .modal__form-field
       .ui-checkbox
         input(type="checkbox" name="agree" id="agree" checked)

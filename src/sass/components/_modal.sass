@@ -13,7 +13,39 @@
     animation-name: fadeIn
 
   &__form
-    h2,
+
+    &-field
+      &--hidden
+        cursor: pointer
+        position: relative
+        margin-bottom: 20px
+
+        *
+          cursor: pointer
+
+        input
+          opacity: 0
+          z-index: -1
+          overflow: hidden
+          position: absolute
+          width: 0.1px
+          height: 0.1px
+
+          + label
+            display: inline-block
+            font-size: 12px
+            text-decoration: underline
+            color: $colorBirdFlower
+
+            p
+              font-size: 12px
+
+            span
+              text-decoration: none
+              display: block
+              font-weight: 300
+
+    h2
       font-size: 30px
       font-weight: 500
       padding-bottom: 45px

@@ -6492,6 +6492,42 @@ html.mfp-helper body {
           animation-name: fadeIn;
 }
 
+.modal__form-field--hidden {
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.modal__form-field--hidden * {
+  cursor: pointer;
+}
+
+.modal__form-field--hidden input {
+  opacity: 0;
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+}
+
+.modal__form-field--hidden input + label {
+  display: inline-block;
+  font-size: 12px;
+  text-decoration: underline;
+  color: #d1be00;
+}
+
+.modal__form-field--hidden input + label p {
+  font-size: 12px;
+}
+
+.modal__form-field--hidden input + label span {
+  text-decoration: none;
+  display: block;
+  font-weight: 300;
+}
+
 .modal__form h2 {
   font-size: 30px;
   font-weight: 500;

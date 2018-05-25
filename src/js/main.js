@@ -15,7 +15,7 @@ $(document).ready(function(){
     desktop: 992,
     wide: 1336,
     hd: 1680
-  }
+  };
 
   var easingSwing = [.02, .01, .47, 1]; // default jQuery easing for anime.js
 
@@ -41,8 +41,8 @@ $(document).ready(function(){
   var sceneBasketball = document.getElementById('scene-basketball');
   var sceneVolleyball = document.getElementById('scene-volleyball');
   var sceneRugby = document.getElementById('scene-rugby');
-  var sceneFootball = document.getElementById('scene-football')
-  var sceneHockey = document.getElementById('scene-hockey')
+  var sceneFootball = document.getElementById('scene-football');
+  var sceneHockey = document.getElementById('scene-hockey');
 
   var parallaxBasketball = {}, parallaxVolleyball = {}, parallaxRugby = {}, parallaxFootball = {}, parallaxHockey = {};
 
@@ -130,7 +130,7 @@ $(document).ready(function(){
     fog.css({
       'transform': 'translate3d(0,-'+transformVal+'px,0)'
     });
-  }, 10))
+  }, 10));
 
 
   // HEADER SCROLL
@@ -206,6 +206,24 @@ $(document).ready(function(){
       }
     });
   }
+
+
+  var inputs = document.querySelectorAll('.inputfile');
+  Array.prototype.forEach.call( inputs, function( input ) {
+    var label	 = input.nextElementSibling,
+      labelVal = label.innerHTML;
+
+    input.addEventListener( 'change', function( e ) {
+      var fileName = '';
+
+      fileName = e.target.value.split('\\').pop();
+
+      if(fileName)
+        label.querySelector('span').innerHTML = fileName;
+      else
+        label.innerHTML = labelVal;
+    });
+  });
 
   //////////
   // SLIDERS
