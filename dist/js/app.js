@@ -234,7 +234,8 @@ $(document).ready(function(){
     .css('display', 'block')
     .parent()
     .zoom({
-      magnify: 1
+      onZoomIn: function() { $(".example__img").hide(); },
+      onZoomOut: function() { $(".example__img").show(); }
     });
 
 
