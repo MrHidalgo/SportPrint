@@ -6555,18 +6555,29 @@ html.mfp-helper body {
 .modal__form-field--hidden input + label {
   display: inline-block;
   font-size: 12px;
-  text-decoration: underline;
   color: #d1be00;
 }
 
 .modal__form-field--hidden input + label p {
   font-size: 12px;
+  text-decoration: underline;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.modal__form-field--hidden input + label p:hover, .modal__form-field--hidden input + label p:focus {
+  color: #af9d00;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .modal__form-field--hidden input + label span {
-  text-decoration: none;
   display: block;
+  color: #000;
   font-weight: 300;
+  margin-top: 5px;
 }
 
 .modal__form h2 {

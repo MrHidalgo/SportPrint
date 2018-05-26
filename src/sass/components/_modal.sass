@@ -34,16 +34,21 @@
           + label
             display: inline-block
             font-size: 12px
-            text-decoration: underline
             color: $colorBirdFlower
 
             p
               font-size: 12px
+              text-decoration: underline
+              +transition(color)
+              &:hover
+                color: $colorBirdFlowerHover
+                +transition(color)
 
             span
-              text-decoration: none
               display: block
+              color: $colorBlack
               font-weight: 300
+              margin-top: 5px
 
     h2
       font-size: 30px
