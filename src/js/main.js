@@ -235,6 +235,7 @@ $(document).ready(function(){
     .parent()
     .zoom({
       on: 'mouseover',
+      magnify: 0.7,
       onZoomIn: function() { $(".example__img").hide(); },
       onZoomOut: function() { $(".example__img").show(); }
     });
